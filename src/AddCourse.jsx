@@ -51,7 +51,7 @@ function AddCourse() {
                 }}
                 onClick={() => {
                     function callback2(data) {
-                        localStorage.setItem("token", data.token)
+                        alert("course added!");
                     }
                     function callback(res) {
                         res.json().then(callback2);
