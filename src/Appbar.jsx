@@ -1,15 +1,18 @@
 import { useEffect, useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Avatar from '@mui/material/Avatar';
 
 function Appbar() {
     const [userEmail, setUserEmail] = useState(null);
+    const [isLoading, setLoading] = useState(false);
 
 
     useEffect(() => {
         function callback2(data) {
             if(data.username) {
                 setUserEmail(data.username);
+                setLoading(false);
             }
         }
         function callback(res) {
@@ -23,6 +26,10 @@ function Appbar() {
         }).then(callback)
     },[]); 
 
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
     if(userEmail) {
         return (
             <div 
@@ -35,9 +42,9 @@ function Appbar() {
                 <Typography variant="h6" component="div">
                     Coursera
                 </Typography>
-                <div style={{display: "flex", alignItems: "center"}}>
+                <div style={{display: "flex", alignItems: "center", gap: 12}}>
                     <div>
-                        {userEmail}
+                    <Avatar src="/broken-image.jpg" />
                     </div>
                     <Button 
                         variant="contained" 
@@ -45,7 +52,8 @@ function Appbar() {
                         style={{marginRight: "16px"}}
                         color={"primary"}  
                         onClick={() => {
-                            localStorage.setItem("token", null)
+                            localStorage.setItem("token", null);
+                            window.location = "/signup";
                         }}  
                     >
                         Logout
