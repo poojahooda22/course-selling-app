@@ -93,16 +93,16 @@ function Appbar() {
             >
                 Signup
             </Button>
-            <Button 
-                variant="contained" 
-                size="small"
-                color={"secondary"}  
-                onClick={() => {
-                    window.location = "/login"
-                }}     
-            >
-                Login
-            </Button>
+                <Button 
+                    variant="contained" 
+                    size="small"
+                    color={"secondary"}  
+                    onClick={() => {
+                        window.location = "/login"
+                    }}     
+                >
+                    Login
+                </Button>
             </div>
         </div>
   )
