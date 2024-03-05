@@ -48,7 +48,7 @@ function Appbar() {
                         display: "flex",
                         alignItems: "center",
                         gap: 12
-                        }}
+                    }}
                     >
                     <div>
                     <Avatar src="/broken-image.jpg" />
