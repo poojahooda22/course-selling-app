@@ -72,7 +72,8 @@ function Appbar() {
     return (
       <div 
         style={{
-            display: "flex", alignItems: "center", 
+            display: "flex",
+             alignItems: "center", 
             justifyContent: "space-between", 
             padding: "16px", 
         }}
