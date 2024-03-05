@@ -78,9 +78,9 @@ function Appbar() {
                 padding: "16px", 
             }}
         >
-        <Typography variant="h6" component="div">
-            Coursera
-        </Typography>
+            <Typography variant="h6" component="div">
+                Coursera
+            </Typography>
         <div style={{display: "flex"}}>
             <Button 
                 variant="contained" 
