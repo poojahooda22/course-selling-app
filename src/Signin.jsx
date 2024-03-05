@@ -19,7 +19,8 @@ function Signin() {
                 marginBottom: '32px',
             }}
         >
-            <Typography variant="h5" component="div">
+            <Typography 
+            variant="h5" component="div">
                 Welcome back to Coursera
             </Typography>
         </div>
