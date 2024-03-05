@@ -37,7 +37,8 @@ function Signin() {
                     padding: '16px', 
                     width: 400, 
                     display:"flex", 
-                    flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+                    flexDirection: "column", 
+                    justifyContent: "center", alignItems: "center" }}>
                 <div 
                     style={{
                         width: '300px',
