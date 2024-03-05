@@ -44,7 +44,7 @@ function Appbar() {
                     Coursera
                 </Typography>
                 <div 
-                style={{display: "flex", alignItems: "center", gap: 12}}>
+                    style={{display: "flex", alignItems: "center", gap: 12}}>
                     <div>
                     <Avatar src="/broken-image.jpg" />
                     </div>
