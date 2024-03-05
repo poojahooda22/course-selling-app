@@ -105,7 +105,7 @@ function Appbar() {
                 </Button>
             </div>
         </div>
-  )
+  );
 }
 
-export default Appbar
+export default Appbar;
