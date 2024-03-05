@@ -55,7 +55,7 @@ function Appbar() {
                     </div>
                     <Button 
                         variant = "contained" 
-                        size="small"
+                        size = "small"
                         style={{marginRight: "16px"}}
                         color={"primary"}  
                         onClick={() => {
