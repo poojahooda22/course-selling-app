@@ -57,7 +57,7 @@ function Appbar() {
                         variant = "contained" 
                         size = "small"
                         style = {{marginRight: "16px"}}
-                        color ={"primary"}  
+                        color = {"primary"}  
                         onClick={() => {
                             localStorage.setItem("token", null);
                             window.location = "/signup";
