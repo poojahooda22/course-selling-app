@@ -26,7 +26,8 @@ function Signin() {
                 Welcome back to Coursera
             </Typography>
         </div>
-        <div style={{display: "flex", justifyContent: "center"}}>
+        <div 
+        style={{display: "flex", justifyContent: "center"}}>
             <Card 
                 style={{padding: '16px', width: 400, display:"flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                 <div 
