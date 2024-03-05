@@ -54,7 +54,7 @@ function Appbar() {
                         <Avatar src="/broken-image.jpg" />
                     </div>
                     <Button 
-                        variant="contained" 
+                        variant = "contained" 
                         size="small"
                         style={{marginRight: "16px"}}
                         color={"primary"}  
