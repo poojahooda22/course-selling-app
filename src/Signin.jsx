@@ -21,7 +21,7 @@ function Signin() {
         >
             <Typography 
                 variant = "h5" 
-                component="div"
+                component = "div"
             >
                 Welcome back to Coursera
             </Typography>
