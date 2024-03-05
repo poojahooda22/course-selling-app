@@ -27,7 +27,8 @@ function Signin() {
             </Typography>
         </div>
         <div 
-            style={{display: "flex",
+            style={{
+                display: "flex",
                 justifyContent: "center"
             }}
         >
