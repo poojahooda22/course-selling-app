@@ -82,17 +82,17 @@ function Appbar() {
                 Coursera
             </Typography>
         <div style={{display: "flex"}}>
-            <Button 
-                variant="contained" 
-                size="small"
-                style={{marginRight: "16px"}}
-                color={"primary"}  
-                onClick={() => {
-                    window.location = "/signup"
-                }}  
-            >
-                Signup
-            </Button>
+                <Button 
+                    variant="contained" 
+                    size="small"
+                    style={{marginRight: "16px"}}
+                    color={"primary"}  
+                    onClick={() => {
+                        window.location = "/signup"
+                    }}  
+                >
+                    Signup
+                </Button>
                 <Button 
                     variant="contained" 
                     size="small"
