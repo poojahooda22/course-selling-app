@@ -73,7 +73,7 @@ function Appbar() {
       <div 
         style={{
             display: "flex",
-             alignItems: "center", 
+            alignItems: "center", 
             justifyContent: "space-between", 
             padding: "16px", 
         }}
