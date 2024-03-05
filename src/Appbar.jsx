@@ -27,7 +27,7 @@ function Appbar() {
     },[]); 
 
     if (isLoading) {
-        return <div>Loading...</div>;
+        return <div></div>;
     }
 
     if(userEmail) {
