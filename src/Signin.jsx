@@ -20,7 +20,8 @@ function Signin() {
             }}
         >
             <Typography 
-                variant="h5" component="div">
+                variant="h5" component="div"
+                >
                 Welcome back to Coursera
             </Typography>
         </div>
