@@ -43,7 +43,8 @@ function Appbar() {
                 <Typography variant="h6" component="div">
                     Coursera
                 </Typography>
-                <div style={{display: "flex", alignItems: "center", gap: 12}}>
+                <div 
+                style={{display: "flex", alignItems: "center", gap: 12}}>
                     <div>
                     <Avatar src="/broken-image.jpg" />
                     </div>
