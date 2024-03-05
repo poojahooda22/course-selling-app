@@ -5,6 +5,7 @@ import Appbar from './Appbar';
 import Signin from './Signin';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AddCourse from './AddCourse';
+import Courses from './Courses';
 
 function App() {
   
@@ -14,7 +15,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/addcourse" element={<AddCourse />} />
-          <Route path="/courses" element></Route>
+          <Route path="/courses" element={<Courses />}></Route>
           <Route path="/login" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
