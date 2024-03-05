@@ -70,14 +70,14 @@ function Appbar() {
         )
     }
     return (
-      <div 
-        style={{
-            display: "flex",
-            alignItems: "center", 
-            justifyContent: "space-between", 
-            padding: "16px", 
-        }}
-    >
+        <div 
+            style={{
+                display: "flex",
+                alignItems: "center", 
+                justifyContent: "space-between", 
+                padding: "16px", 
+            }}
+        >
         <Typography variant="h6" component="div">
             Coursera
         </Typography>
