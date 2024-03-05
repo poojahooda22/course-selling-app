@@ -28,7 +28,7 @@ function Signin() {
         </div>
         <div 
             style={{display: "flex",
-             justifyContent: "center"
+                justifyContent: "center"
             }}
         >
             <Card 
