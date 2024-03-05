@@ -56,7 +56,7 @@ function Appbar() {
                     <Button 
                         variant = "contained" 
                         size = "small"
-                        style={{marginRight: "16px"}}
+                        style = {{marginRight: "16px"}}
                         color={"primary"}  
                         onClick={() => {
                             localStorage.setItem("token", null);
