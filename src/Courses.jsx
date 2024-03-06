@@ -10,7 +10,7 @@ function Courses() {
         "Authorization": "Bearer " + localStorage.getItem("token"),
       }
     })
-  })
+  }, []);
 
   return (
     <div>
