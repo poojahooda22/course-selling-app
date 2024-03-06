@@ -53,7 +53,9 @@ function AddCourse() {
                 margin="normal" 
             />
             <TextField  
-                
+                onChange={(e) => {
+                    setImage(e.target.value)
+                }}
             />
             
             <Button 
