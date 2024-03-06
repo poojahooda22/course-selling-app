@@ -42,6 +42,9 @@ function AddCourse() {
                 margin="normal" 
             />
             <TextField  
+                onChange={(e) => {
+                    setPrice(e.target.value)
+                }}
                 style={{width: '360px'}} 
                 label="price" 
                 variant="outlined" 
