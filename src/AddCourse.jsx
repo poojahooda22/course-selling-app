@@ -57,6 +57,7 @@ function AddCourse() {
                     setImage(e.target.value)
                 }}
                 style={{width: '360px'}} 
+                label="price" 
             />
             
             <Button 
