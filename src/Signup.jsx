@@ -25,7 +25,8 @@ function Signup() {
         </div>
         <div 
             style={{
-                display: "flex", justifyContent: "center"}}
+                display: "flex", justifyContent: "center"
+            }}
         >
             <Card 
                 style={{
