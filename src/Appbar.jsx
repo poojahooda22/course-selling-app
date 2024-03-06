@@ -84,7 +84,8 @@ function Appbar() {
             >
                 Coursera
             </Typography>
-            <div style={{display: "flex"}}>
+            <div 
+            style={{display: "flex"}}>
                 <Button 
                     variant="contained" 
                     size="small"
