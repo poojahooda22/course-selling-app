@@ -8,10 +8,10 @@ function Courses() {
       method: "GET",
       headers: {
         "Authorization": "Bearer " + localStorage.getItem("token"),
-    }
+      }
     })
   })
-  
+
   return (
     <div>
       Courses
