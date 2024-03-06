@@ -4,6 +4,11 @@ function Courses() {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
+
+    function callback1(res) {
+      res.json().then(callback2);
+    }
+
     fetch("http://localhost:3000/admin/courses", {
       method: "GET",
       headers: {
