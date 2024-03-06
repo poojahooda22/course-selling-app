@@ -9,7 +9,7 @@ function Courses() {
       headers: {
         "Authorization": "Bearer " + localStorage.getItem("token"),
       }
-    })
+    }).then(callback1)
   }, []);
 
   return (
