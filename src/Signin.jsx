@@ -10,7 +10,6 @@ function Signin() {
     const [password,  setPassword] = useState("");
   return (
     <div>
-        
         <div 
             style={{
                 display: "flex",
