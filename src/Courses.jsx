@@ -26,10 +26,6 @@ function Courses() {
   )
 }  
 
-function Course() {
-  return (
-    
-  )
-}
+
 
 export default Courses;
