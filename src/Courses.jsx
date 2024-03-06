@@ -26,7 +26,7 @@ function Courses() {
   )
 }  
 
-function Course(props) {
+function Course() {
   return (
     <div>
       <h1></h1>
