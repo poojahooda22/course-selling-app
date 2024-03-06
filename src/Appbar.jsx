@@ -86,7 +86,8 @@ function Appbar() {
             </Typography>
             <div 
                 style={{
-                    display: "flex"}}>
+                    display: "flex"
+                    }}>
                 <Button 
                     variant="contained" 
                     size="small"
