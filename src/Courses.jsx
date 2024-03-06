@@ -23,8 +23,8 @@ function Courses() {
     <div>
       Courses
       {courses.map(course => {
-        return <Course key={course} course={course} /> 
-      })}
+        return <Course course={course} /> } 
+      )}
     </div>
   );
 }  
@@ -32,6 +32,7 @@ function Courses() {
 function Course(props) {
   return <div>
     {props.course.title}
+    {props.course.description}
   </div>
 }
 
