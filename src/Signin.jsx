@@ -59,7 +59,8 @@ function Signin() {
                         id="outlined-basic" 
                         label="Password" 
                         type='password' 
-                        variant="outlined" size="small" margin="normal"/>
+                        variant="outlined" 
+                        size="small" margin="normal"/>
                 </div>
                 <Button 
                     variant="contained" 
