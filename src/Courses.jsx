@@ -4,7 +4,6 @@ function Courses() {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-
     function callback2(data) {
       setCourses(data);
     }
