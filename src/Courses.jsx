@@ -27,7 +27,9 @@ function Courses() {
 }  
 
 function Course(props) {
-  
+  return <div>
+    {props.title}
+  </div>
 }
 
 
