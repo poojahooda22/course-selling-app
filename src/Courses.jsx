@@ -6,7 +6,7 @@ function Courses() {
   useEffect(() => {
 
     function callback2(data) {
-      console.log(data);
+      setCourses(data);
     }
     function callback1(res) {
       res.json().then(callback2);
@@ -22,9 +22,17 @@ function Courses() {
 
   return (
     <div>
-      Courses
+     {JSON.stringify(courses)}
     </div>
   )
 }  
+
+function Course(props) {
+  return (
+    <div>
+      <h1>{props.title}</h1>
+    </div>
+  )
+}
 
 export default Courses;
