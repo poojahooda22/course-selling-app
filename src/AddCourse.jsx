@@ -85,7 +85,7 @@ function AddCourse() {
             </Button>
         </Card>
     </div>
-  )
+  );
 }
 
 export default AddCourse
