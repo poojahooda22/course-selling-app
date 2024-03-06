@@ -21,7 +21,10 @@ function Courses() {
 
   return (
     <div>
-     {JSON.stringify(courses)}
+      Courses
+      {courses.map(course => {
+        return <Course key={course} course={course} /> 
+      })}
     </div>
   );
 }  
