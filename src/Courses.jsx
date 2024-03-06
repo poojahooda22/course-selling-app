@@ -5,6 +5,9 @@ function Courses() {
 
   useEffect(() => {
 
+    function callback2(data) {
+      console.log(data);
+    }
     function callback1(res) {
       res.json().then(callback2);
     }
