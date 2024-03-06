@@ -22,6 +22,9 @@ function AddCourse() {
             }}
         >
             <TextField 
+                onChange={(e) => {
+                    setTitle(e.target.value)
+                }}
                 style={{width: '360px'}} 
                 label="Title" 
                 variant="outlined" 
@@ -29,6 +32,7 @@ function AddCourse() {
                 margin="normal" 
             />
             <TextField  
+                
                 style={{width: '360px'}} 
                 label="description" 
                 variant="outlined" 
