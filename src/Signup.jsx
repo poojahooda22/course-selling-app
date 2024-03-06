@@ -100,7 +100,7 @@ function Signup() {
             </Card>
         </div>
     </div>
-  )
+  );
 }
 
 export default Signup
