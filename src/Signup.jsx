@@ -32,7 +32,8 @@ function Signup() {
             <Card 
                 style={{
                     padding: '16px', 
-                    width: 400, display:"flex", 
+                    width: 400, 
+                    display:"flex", 
                     flexDirection: "column", justifyContent: "center", 
                     alignItems: "center" 
                 }}
