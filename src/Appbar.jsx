@@ -68,7 +68,7 @@ function Appbar() {
                 </div>
             </div>
         )
-    }
+    }  
     return (
         <div 
             style={{
@@ -78,7 +78,8 @@ function Appbar() {
                 padding: "16px", 
             }}
         >
-            <Typography variant="h6" component="div">
+            <Typography 
+            variant="h6" component="div">
                 Coursera
             </Typography>
             <div style={{display: "flex"}}>
