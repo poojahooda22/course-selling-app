@@ -56,6 +56,7 @@ function AddCourse() {
                 onChange={(e) => {
                     setImage(e.target.value)
                 }}
+                style={{width: '360px'}} 
             />
             
             <Button 
