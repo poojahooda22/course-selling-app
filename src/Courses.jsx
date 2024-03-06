@@ -26,5 +26,9 @@ function Courses() {
   );
 }  
 
+function Course(props) {
+  
+}
+
 
 export default Courses;
