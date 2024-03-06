@@ -19,22 +19,19 @@ function Courses() {
     }).then(callback1)
   }, []);
 
-  return (
-    <div>
-      Courses
-      {courses.map(course => {
-        return <Course course={course} /> } 
-      )}
+  return <div>
+   {Courses.map((course) => (
+    <div key={course}>
+      {course}
+
     </div>
-  );
+   ))}
+    
+  </div>
 }  
 
-function Course(props) {
-  return <div>
-    {props.course.title}
-    {props.course.description}
-  </div>
-}
+
+
 
 
 export default Courses;
