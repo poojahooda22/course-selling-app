@@ -31,7 +31,7 @@ function Courses() {
 
 function Course(props) {
   return <div>
-    {props.title}
+    {props.course.title}
   </div>
 }
 
