@@ -28,9 +28,7 @@ function Courses() {
 
 function Course() {
   return (
-    <div>
-      
-    </div>
+    
   )
 }
 
