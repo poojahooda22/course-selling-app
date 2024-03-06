@@ -23,7 +23,7 @@ function Courses() {
     <div>
      {JSON.stringify(courses)}
     </div>
-  )
+  );
 }  
 
 
