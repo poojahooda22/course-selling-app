@@ -8,7 +8,7 @@ import { useState } from 'react';
 function Signup() {
     const [email, setEmail] = useState("");
     const [password,  setPassword] = useState("");
-    
+
   return (
     <div>
         <div 
@@ -23,7 +23,8 @@ function Signup() {
                 Welcome to Coursera
             </Typography>
         </div>
-        <div style={{display: "flex", justifyContent: "center"}}>
+        <div 
+        style={{display: "flex", justifyContent: "center"}}>
             <Card 
                 style={{
                     padding: '16px', width: 400, display:"flex", 
