@@ -14,7 +14,8 @@ function AddCourse() {
   return (
     <div
         style={{
-            display: 'flex', alignItems: 'center', justifyContent: 'center'}}
+            display: 'flex', alignItems: 'center', justifyContent: 'center'
+        }}
     >
         <Card 
             style={{
