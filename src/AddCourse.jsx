@@ -59,7 +59,8 @@ function AddCourse() {
                 style={{width: '360px'}} 
                 label="price" 
                 variant="outlined"
-                size="small" 
+                size="small"
+                margin="normal"  
             />
             
             <Button 
