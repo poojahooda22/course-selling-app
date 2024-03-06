@@ -32,7 +32,9 @@ function AddCourse() {
                 margin="normal" 
             />
             <TextField  
-                
+                onChange={(e) => {
+                    setDescription(e.target.value)
+                }}
                 style={{width: '360px'}} 
                 label="description" 
                 variant="outlined" 
