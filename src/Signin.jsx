@@ -60,7 +60,8 @@ function Signin() {
                         label="Password" 
                         type='password' 
                         variant="outlined" 
-                        size="small" margin="normal"/>
+                        size="small" 
+                        margin="normal"/>
                 </div>
                 <Button 
                     variant="contained" 
