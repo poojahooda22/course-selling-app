@@ -9,6 +9,7 @@ function AddCourse() {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
+    const [image, setImage] = useState("");
 
   return (
     <div
@@ -51,6 +52,7 @@ function AddCourse() {
                 size="small" 
                 margin="normal" 
             />
+            
             <Button 
                 variant="contained" 
                 margin="normal"
@@ -70,7 +72,7 @@ function AddCourse() {
                         body: JSON.stringify({
                             title: title,
                             description: description,
-                            imageLink: "",
+                            imageLink: image,
                             price: price,
                             published: true
                         }),
