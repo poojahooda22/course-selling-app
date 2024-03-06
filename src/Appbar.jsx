@@ -87,7 +87,7 @@ function Appbar() {
             <div 
                 style={{
                     display: "flex"
-                    }}>
+                }}>
                 <Button 
                     variant="contained" 
                     size="small"
