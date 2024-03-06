@@ -34,7 +34,8 @@ function Signup() {
                     padding: '16px', 
                     width: 400, 
                     display:"flex", 
-                    flexDirection: "column", justifyContent: "center", 
+                    flexDirection: "column", 
+                    justifyContent: "center", 
                     alignItems: "center" 
                 }}
             >
