@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Course from "./Course";
 
 function Courses() {
   const [courses, setCourses] = useState([]);
@@ -22,20 +23,8 @@ function Courses() {
   return <div>
    {courses.map(course => (
     <Course course={course} key={course.id} />
-   ))}
-
-
-    
+   ))} 
   </div>
 }  
-
-function Course(props) {
-   return <div>
-    {props.course.title}
-   </div>
-}
-
-
-
 
 export default Courses;
