@@ -42,7 +42,8 @@ function Course(props) {
                 </Typography>
                 <Typography 
                     variant="h6" 
-                    component="div" style={{color: '#28c271'}}
+                    component="div" 
+                    style={{color: '#28c271'}}
                 >
                     35% off
                 </Typography>
