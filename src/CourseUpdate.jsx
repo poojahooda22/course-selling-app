@@ -42,6 +42,7 @@ function CourseUpdate() {
     return (
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around'}}>
             <Course course={course} />   
+            
             <UpdatedCard course={course} />
         </div>
     )
@@ -145,5 +146,6 @@ function UpdatedCard(props) {
     </div>
   );
 }
+
 
 export default CourseUpdate;
