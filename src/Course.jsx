@@ -24,9 +24,11 @@ function Course(props) {
                 {props.course.title}
             </Typography>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between',  width: '400px', marginTop: '12px' }}>
-                <Typography variant="body1" component="div">{props.course.description}</Typography>
-                <Typography variant="h6" component="div">Price: {props.course.price}</Typography>
+                
+                <Typography variant="h6" component="div">Rs {props.course.price}</Typography>
+                <Typography variant="h6" component="div" style={{color: '#28c271'}}>35% off</Typography>
             </div>
+            <Typography variant="body1" component="div" style={{textAlign: 'left'}}>{props.course.description}</Typography>
         </Card>
     </div>
  }
