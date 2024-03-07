@@ -16,7 +16,13 @@ function Course(props) {
                 src={props.course.imageLink}
                 style={{width: '100%', height: '200px', objectFit: 'cover', borderRadius: '8px'}}
             />
-            <Typography variant="h5" component="div">{props.course.title}</Typography>
+            <Typography variant="h5" component="div" 
+                style={{marginTop: '12px'}}
+            >{props.course.title}</Typography>
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between',  width: '400px', marginTop: '12px' }}>
+                <Typography variant="body1" component="div">{props.course.description}</Typography>
+                <Typography variant="h6" component="div">Price: {props.course.price}</Typography>
+            </div>
         </Card>
     </div>
  }
