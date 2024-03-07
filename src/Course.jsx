@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 
 function Course(props) {
     return <div 
-    style={{ margin: '16px'}}>
+        style={{ margin: '16px'}}>
         <Card style={{
             padding: '16px', 
             width: 300, 
