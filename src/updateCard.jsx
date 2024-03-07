@@ -79,7 +79,7 @@ function UpdateCard(props) {
                     function callback(res) {
                         res.json().then(callback2);
                     }
-                    fetch('http://localhost:3000/admin/courses/', {
+                    fetch('http://localhost:3000/admin/courses/' + Course.id, {
                         method: 'PUT',
                         body: JSON.stringify({
                             title: title,
