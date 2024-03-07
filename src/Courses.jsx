@@ -21,13 +21,9 @@ function Courses() {
     }).then(callback1)
   }, []);
 
-  return <Grid container spacing={2}>
-    <Grid items xs={8}>
-      {courses.map(course => (
-      <Course course={course} key={course.id} />
-    ))} 
-    </Grid>
-  </Grid>
+  return 
+      
+   
 }  
 
 export default Courses;
