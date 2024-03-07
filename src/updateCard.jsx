@@ -8,6 +8,7 @@ function UpdateCard(props) {
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
     const [image, setImage] = useState("");
+    const course = props.course;
 
   return (
     <div
@@ -79,7 +80,7 @@ function UpdateCard(props) {
                     function callback(res) {
                         res.json().then(callback2);
                     }
-                    fetch('http://localhost:3000/admin/courses/' + Course.id, {
+                    fetch('http://localhost:3000/admin/courses/' + course.id, {
                         method: 'PUT',
                         body: JSON.stringify({
                             title: title,
