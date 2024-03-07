@@ -65,8 +65,7 @@ function AddCourse() {
                 variant="outlined"
                 size="small"
                 margin="normal"  
-            />
-            
+            />           
             <Button 
                 variant="contained" 
                 margin="normal"
