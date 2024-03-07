@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import Course from './Course';
-
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
