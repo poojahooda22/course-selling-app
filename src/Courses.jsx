@@ -5,7 +5,7 @@ function Courses() {
 
   useEffect(() => {
     function callback2(data) {
-      setCourses(data);
+      setCourses(data.courses);
     }
     function callback1(res) {
       res.json().then(callback2);
@@ -20,16 +20,20 @@ function Courses() {
   }, []);
 
   return <div>
-   {Courses.map((course) => (
-    <div key={course}>
-      {course}
-
-    </div>
+   {courses.map(course => (
+    <Course course={course} key={course.id} />
    ))}
+
+
     
   </div>
 }  
 
+function Course(props) {
+   return <div>
+    {props.course.title}
+   </div>
+}
 
 
 
