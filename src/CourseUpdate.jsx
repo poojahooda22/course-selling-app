@@ -5,6 +5,7 @@ import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
+
 function CourseUpdate() {
     let { courseId} = useParams();
     const[courses, setCourses] = useState([]);
@@ -109,8 +110,7 @@ function UpdatedCard(props) {
                 variant="outlined"
                 size="small"
                 margin="normal"  
-            />
-            
+            />           
             <Button 
                 variant="contained" 
                 margin="normal"
