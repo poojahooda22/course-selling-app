@@ -28,7 +28,7 @@ function Course(props) {
             <div 
                 style={{
                     display: 'flex', alignItems: 'center', justifyContent: 'space-between',  width: '300px', marginTop: '12px' 
-                    }}
+                }}
             >
                 
                 <Typography variant="h6" component="div">Rs {props.course.price}</Typography>
