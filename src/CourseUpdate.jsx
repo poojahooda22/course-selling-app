@@ -1,8 +1,7 @@
 import {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import Course from './Course';
-import UpdateCard from './UpdateCard';
-
+import UpdatedCard from './UpdatedCard';
 
 function CourseUpdate() {
     let { courseId} = useParams();
@@ -40,7 +39,7 @@ function CourseUpdate() {
     return (
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around'}}>
             <Course course={course} />   
-            <UpdateCard course={course} />
+            <UpdatedCard course={course} />
         </div>
     )
 }
