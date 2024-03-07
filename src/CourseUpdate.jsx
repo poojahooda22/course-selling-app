@@ -52,7 +52,6 @@ function UpdatedCard(props) {
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
     const [image, setImage] = useState("");
-
     const course = props.course;
    
   return (
