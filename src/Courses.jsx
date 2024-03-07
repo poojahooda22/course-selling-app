@@ -20,7 +20,7 @@ function Courses() {
     }).then(callback1)
   }, []);
 
-  return <div>
+  return <div style={{display: "flex"}}>
    {courses.map(course => (
     <Course course={course} key={course.id} />
    ))} 
