@@ -55,7 +55,6 @@ function UpdatedCard(props) {
 
     const course = props.course;
    
-
   return (
     <div
         style={{
