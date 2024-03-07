@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Course from "./Course";
+import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
 
 function Courses() {
   const [courses, setCourses] = useState([]);
@@ -20,11 +21,13 @@ function Courses() {
     }).then(callback1)
   }, []);
 
-  return <div style={{display: "flex", flexWrap: 'wrap'}}>
-   {courses.map(course => (
-    <Course course={course} key={course.id} />
-   ))} 
-  </div>
+  return <Grid container spacing={2}>
+    <Grid items xs={8}>
+      {courses.map(course => (
+      <Course course={course} key={course.id} />
+    ))} 
+    </Grid>
+  </Grid>
 }  
 
 export default Courses;
