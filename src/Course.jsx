@@ -30,7 +30,8 @@ function Course(props) {
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'space-between',  
-                    width: '300px', marginTop: '12px' 
+                    width: '300px', 
+                    marginTop: '12px' 
                 }}
             >
                 
