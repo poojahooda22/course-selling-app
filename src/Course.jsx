@@ -27,7 +27,8 @@ function Course(props) {
             </Typography>
             <div 
                 style={{
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',  width: '300px', marginTop: '12px' 
+                    display: 'flex', 
+                    alignItems: 'center', justifyContent: 'space-between',  width: '300px', marginTop: '12px' 
                 }}
             >
                 
