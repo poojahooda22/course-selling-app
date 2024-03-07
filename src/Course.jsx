@@ -41,7 +41,8 @@ function Course(props) {
                     Rs {props.course.price}
                 </Typography>
                 <Typography variant="h6" component="div" style={{color: '#28c271'}}>
-                    35% off</Typography>
+                    35% off
+                    </Typography>
             </div>
             <Typography variant="body1" component="div" style={{textAlign: 'left', width: '300px', margin: '12px'}}>{props.course.description}</Typography>
         </Card>
