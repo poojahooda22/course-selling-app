@@ -23,7 +23,8 @@ function AddCourse() {
                 padding: '18px', 
                 width: 400, 
                 display:"flex", 
-                flexDirection: "column", justifyContent: "center", 
+                flexDirection: "column", 
+                justifyContent: "center", 
                 alignItems: "center" 
             }}
         >
