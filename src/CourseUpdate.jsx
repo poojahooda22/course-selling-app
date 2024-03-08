@@ -43,7 +43,7 @@ function CourseUpdate() {
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around'}}>
             <Course course={course} />   
             
-            <UpdatedCard course={course} />
+            <UpdatedCard courses={courses} course={course} setCourses={setCourses} />
         </div>
     )
 }
@@ -119,7 +119,23 @@ function UpdatedCard(props) {
                 }}
                 onClick={() => {
                     function callback2(data) {
-                        alert("course updated!");
+                        // alert("course updated!");
+                        let updatedCourses = [];
+                        for(let i=0; i<props.courses.length; i++) {
+                            if(props.courses[i].id == course.id) {
+                                updatedCourses.push({
+                                    id: course.id,
+                                    title: title,
+                                    description: description,
+                                    imageLink: image,
+                                    price: price,
+
+                                })
+                            } else {
+                                updatedCourses.push(props.courses[i]);                            
+                            }
+                        }
+                        props.setCourses(updatedCourses);
                     }
                     function callback(res) {
                         res.json().then(callback2);
