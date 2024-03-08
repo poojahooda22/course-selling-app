@@ -49,7 +49,7 @@ function Course(props) {
             </div>
             <Typography variant="body1" component="div" style={{textAlign: 'left', width: '300px', margin: '12px'}}>
                 {props.course.description}
-                </Typography>
+            </Typography>
         </Card>
     </div>
  }
