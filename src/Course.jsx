@@ -52,7 +52,7 @@ function Course(props) {
                 component="div" 
                 style={{
                     textAlign: 'left', width: '300px', margin: '12px'}}
-                >
+            >
                 {props.course.description}
             </Typography>
         </Card>
