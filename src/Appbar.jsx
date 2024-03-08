@@ -52,7 +52,8 @@ function Appbar() {
                     }}
                 >
                     <div>
-                        <Avatar src="/broken-image.jpg" />
+                        <Avatar 
+                        src="/broken-image.jpg" />
                     </div>
                     <Button 
                         variant = "contained" 
