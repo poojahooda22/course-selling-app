@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Course from "./Course";
-import Grid from '@
+import Grid from 
 
 function Courses() {
   const [courses, setCourses] = useState([]);
