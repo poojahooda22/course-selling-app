@@ -1,7 +1,6 @@
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 
-
 function Course(props) {
     return <div 
         style={{ margin: '16px'}}
