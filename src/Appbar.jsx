@@ -38,7 +38,8 @@ function Appbar() {
                     padding: "16px", 
                 }}
             >
-                <Typography variant="h6" component="div">
+                <Typography 
+                variant="h6" component="div">
                     Coursera
                 </Typography>
                 <div 
