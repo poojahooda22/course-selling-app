@@ -39,7 +39,8 @@ function Appbar() {
                 }}
             >
                 <Typography 
-                    variant="h6" component="div">
+                    variant="h6" 
+                    component="div">
                     Coursera
                 </Typography>
                 <div 
