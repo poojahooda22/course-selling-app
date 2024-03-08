@@ -40,7 +40,8 @@ function Appbar() {
             >
                 <Typography 
                     variant="h6" 
-                    component="div">
+                    component="div"
+                    >
                     Coursera
                 </Typography>
                 <div 
