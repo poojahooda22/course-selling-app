@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Course from "./Course";
-import Grid from '@mui/material/Unstable_Grid2'; // Grid versio
+import Grid from '@mui/material/Unstable_Grid2'; // Grid versi
 
 function Courses() {
   const [courses, setCourses] = useState([]);
