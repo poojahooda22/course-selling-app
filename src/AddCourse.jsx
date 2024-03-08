@@ -20,7 +20,8 @@ function AddCourse() {
     >
         <Card 
             style={{
-                padding: '18px', width: 400, 
+                padding: '18px', 
+                width: 400, 
                 display:"flex", 
                 flexDirection: "column", justifyContent: "center", 
                 alignItems: "center" 
