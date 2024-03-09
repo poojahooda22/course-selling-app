@@ -15,4 +15,4 @@ app.use("/user", userRouter);
 //connect to MongoDB
 mongoose.connect("mongodb+srv://phooda938:phooda938@cluster0.kof5uvs.mongodb.net/", {useNewUrlParser: true, useUnifiedTopology: true} )
 
-app.listen(3000, () => console.log(''))
+app.listen(3000, () => console.log('Server'))
