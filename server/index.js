@@ -10,4 +10,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/admin", adminRouter);
-app.use("/user", userRouter)
+app.use("/user", userRouter);
+
+//connect to 
