@@ -10,7 +10,7 @@ const router = express.Router();
 router.get('/me', authenticateJwt, async (req, res) => {
     const admin = await Admin.findOne({username: req.user.username});
     res.json({
-      username: req.user.username
+      username: admin.username
     })
   })
 
