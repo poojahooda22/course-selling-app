@@ -13,4 +13,4 @@ app.use("/admin", adminRouter);
 app.use("/user", userRouter);
 
 //connect to MongoDB
-
+mongoose.connect("mongodb+srv://phooda938:phooda938@cluster0.kof5uvs.mongodb.net/", )
