@@ -6,4 +6,4 @@ const userRouter = require("./routes/user");
 
 const app = express();
 
-app.use
+app.use(cors());
