@@ -7,8 +7,8 @@ const { authenticateJwt, SECRET } = require('./middleware/auth');
 const router = express.Router();
 
 
-router.get('/me', authenticateJwt, (req, res) => {
-    const admin = 
+router.get('/me', authenticateJwt, async (req, res) => {
+    const admin = await
     res.json({
       username: req.user.username
     })
