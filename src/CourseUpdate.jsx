@@ -129,7 +129,6 @@ function UpdatedCard(props) {
                                     description: description,
                                     imageLink: image,
                                     price: price,
-
                                 })
                             } else {
                                 updatedCourses.push(props.courses[i]);                            
