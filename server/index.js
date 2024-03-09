@@ -1,3 +1,3 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors 
+const cors = require('cors');
