@@ -4,10 +4,10 @@ const { User, Course, Admin } = require("./db");
 const jwt = require('jsonwebtoken');
 const { authenticateJwt, SECRET } = require('./middleware/auth');
 
-const router = express.Router;
+const router = express.Router();
 
 
-router.get('/admin/me', authenticateJwt, (req, res) => {
+router.get('/me', authenticateJwt, (req, res) => {
     res.json({
       username: req.user.username
     })
