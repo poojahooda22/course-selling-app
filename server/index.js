@@ -1,2 +1,2 @@
 const express = require('express');
-const mongoose
+const mongoose = require()
