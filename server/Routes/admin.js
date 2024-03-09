@@ -8,6 +8,7 @@ const router = express.Router();
 
 
 router.get('/me', authenticateJwt, (req, res) => {
+    const admin = 
     res.json({
       username: req.user.username
     })
