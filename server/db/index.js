@@ -22,4 +22,4 @@ const courseSchema = new mongoose.Schema({
     published: Boolean
 });
 
-const User = mongoose.model()
+const User = mongoose.model('User')
