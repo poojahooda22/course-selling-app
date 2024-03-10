@@ -4,7 +4,7 @@ const {User, Course, Admin} = require("../db");
 
 const router = express.Router();
 
-app.post('/users/signup', async (req, res) => {
+router.post('/users/signup', async (req, res) => {
     const {username, password} = req.body;
     const user = await User.findOne({ username});
     if(user) {
