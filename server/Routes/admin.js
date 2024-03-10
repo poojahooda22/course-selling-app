@@ -63,6 +63,8 @@ router.put('/courses/:courseId', authenticateJwt, async (req, res) => {
 });
 
 
-router.get('/courses/:courseId', authenticateJwt )
+router.get('/courses/:courseId', authenticateJwt, async (req, res) => {
+  
+} )
 
 module.exports = router;
