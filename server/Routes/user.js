@@ -28,3 +28,8 @@ router.post('/login', async(req, res) => {
     }
 });
 
+
+app.get('/users/courses', authenticateJwt, async (req, res) => {
+    const courses = await Course.find({published: true});
+    res.json({ courses });
+  });
