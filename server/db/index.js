@@ -26,4 +26,6 @@ const User = mongoose.model('User', userSchema);
 const Admin = mongoose.model('Admin', adminSchema);
 const Course = mongoose.model('Course', courseSchema);
 
-module.exports 
+module.exports = {
+    
+}
