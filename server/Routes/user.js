@@ -59,3 +59,4 @@ router.get('/purchasedCourses', authenticateJwt, async (req, res) => {
     }
 });
 
+module.exports = router;
