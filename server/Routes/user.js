@@ -16,3 +16,14 @@ router.post('/signup', async (req, res) => {
         res.json({message: 'User created successfully', token});
     }
 });
+
+router.post('/users/login', async(req, res) => {
+    const {username, password} = req.headers;
+    const user = await User.findOne({username, password});
+    if(user) {
+        const token = jwt.sign({username, role: 'user'}, SECRET, {expiresIn: '1h'});
+        res.json({message: 'logged in seccessfully ', token});
+    } else {
+        res.status(403).json({message: 'Invalid username or password'});
+    }
+})
