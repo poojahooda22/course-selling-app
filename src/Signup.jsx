@@ -35,8 +35,7 @@ function Signup() {
                     width: 400, 
                     display:"flex", 
                     flexDirection: "column", 
-                    justifyContent: "center", 
-                    alignItems: "center" 
+                    justifyContent: "center",  alignItems: "center" 
                 }}
             >
                 <div 
