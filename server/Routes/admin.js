@@ -45,3 +45,10 @@ router.post('/admin/courses', authenticateJwt, async (req, res) => {
   res.json({message: 'Course created successfully', courseId: course.id });    
 })
 
+
+
+app.get('/admin/courses', authenticateJwt, async(req, res) => {
+  const courses = await Course.find({});
+
+  res.json({courses});
+});
