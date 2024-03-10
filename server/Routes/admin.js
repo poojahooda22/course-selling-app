@@ -39,7 +39,7 @@ router.post('/admin/login', async(req, res) => {
   }
 });
 
-app.post('/admin/courses', authenticateJwt, async (req, res) => {
+router.post('/admin/courses', authenticateJwt, async (req, res) => {
   const course = new Course(req.body);
   await course.save();
   res.json({message: 'Course created successfully', courseId: course.id });    
