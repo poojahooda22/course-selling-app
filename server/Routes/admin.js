@@ -47,7 +47,7 @@ router.post('/admin/courses', authenticateJwt, async (req, res) => {
 
 
 
-app.get('/admin/courses', authenticateJwt, async(req, res) => {
+router.get('/admin/courses', authenticateJwt, async(req, res) => {
   const courses = await Course.find({});
 
   res.json({courses});
