@@ -50,7 +50,7 @@ router.post('/users/courses/:courseId', authenticateJwt, async(req, res) => {
     }
 });
 
-app.get('/users/purchasedCourses', authenticateJwt, async (req, res) => {
+router.get('/users/purchasedCourses', authenticateJwt, async (req, res) => {
     const user = await User.findOne({username: req.user.username}).populate('purchasedCourses');
     if(user) {
         res.json({ purchasedCourses: user.purchasedCourses || [] });
