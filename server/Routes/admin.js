@@ -26,3 +26,15 @@ router.post('/signup', async (req, res) => {
         res.json({message: 'Admin created successfully', token});
     }
 });
+
+
+app.post('/admin/login', async(req, res) => {
+  const {username, password} = req.headers;
+  const admin = await Admin.findOne({username, password});
+  if(admin) {
+      const token = jwt.sign({username, role: 'admin'}, SECRET, {expiresIn: '1h'});
+      res.json({message: 'Logged in successfully', token});
+  } else {
+      res.status(403).json({message: 'Invalid or password'});
+  }
+});
