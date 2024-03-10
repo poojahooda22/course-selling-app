@@ -57,4 +57,5 @@ router.get('/purchasedCourses', authenticateJwt, async (req, res) => {
     } else {
         res.status(403).json({message: 'user not found'});
     }
-})
+});
+
