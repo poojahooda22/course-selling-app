@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const express = require('express');
-const { User, Course, Admin } = require("./db");
+const { User, Course, Admin } = require("../db");
 const jwt = require('jsonwebtoken');
-const { authenticateJwt, SECRET } = require('./middleware/auth');
+const { authenticateJwt, SECRET } = require('../middleware/auth');
 
 const router = express.Router();
 
@@ -38,3 +38,10 @@ router.post('/admin/login', async(req, res) => {
       res.status(403).json({message: 'Invalid or password'});
   }
 });
+
+app.post('/admin/courses', authenticateJwt, async (req, res) => {
+  const course = new Course(req.body);
+  await course.save();
+  res.json({message: 'Course created successfully', courseId: course.id });    
+})
+
