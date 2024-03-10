@@ -49,3 +49,12 @@ router.post('/users/courses/:courseId', authenticateJwt, async(req, res) => {
         res.status(404).json({message: 'course not found'})
     }
 });
+
+app.get('/users/purchasedCourses', authenticateJwt, async (req, res) => {
+    const user = await User.findOne({username: req.user.username}).populate('purchasedCourses');
+    if(user) {
+        res.json({ purchasedCourses: user.purchasedCourses || [] });
+    } else {
+        res.status(403).json({message: 'user not found'});
+    }
+})
