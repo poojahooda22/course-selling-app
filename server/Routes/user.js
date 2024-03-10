@@ -33,3 +33,19 @@ router.get('/courses', authenticateJwt, async (req, res) => {
     const courses = await Course.find({published: true});
     res.json({ courses });
   });
+
+  app.post('/users/courses/:courseId', authenticateJwt, async(req, res) => {
+    const course = await Course.findById(req.params.courseId);
+    if(course) {
+        const user = await User.findOne({username: req.user.username});
+        if(user) {
+            user.purchasedCourses.push(course);
+            await user.save();
+            res.json({message: 'course purchased successfully!'});
+        } else {
+            res.status(403).json({message: 'user not found'});
+        }
+    } else {
+        res.status(404).json({message: 'course not found'})
+    }
+});
