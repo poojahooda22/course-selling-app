@@ -34,7 +34,7 @@ router.get('/courses', authenticateJwt, async (req, res) => {
     res.json({ courses });
   });
 
-  app.post('/users/courses/:courseId', authenticateJwt, async(req, res) => {
+  router.post('/users/courses/:courseId', authenticateJwt, async(req, res) => {
     const course = await Course.findById(req.params.courseId);
     if(course) {
         const user = await User.findOne({username: req.user.username});
