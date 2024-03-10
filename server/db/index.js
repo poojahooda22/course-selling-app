@@ -23,4 +23,4 @@ const courseSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model('User', userSchema);
-const Admin = mongoose.model('Admin', )
+const Admin = mongoose.model('Admin', adminSchema);
