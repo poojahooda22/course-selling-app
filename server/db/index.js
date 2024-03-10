@@ -29,5 +29,5 @@ const Course = mongoose.model('Course', courseSchema);
 module.exports = {
     User,
     Admin,
-    
+    Course
 }
