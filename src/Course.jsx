@@ -61,7 +61,9 @@ function Course(props) {
                 {props.course.description}
             </Typography>
 
-
+                <Stack>
+                    
+                </Stack>
         </Card>
     </div>
  }
