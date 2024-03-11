@@ -38,7 +38,7 @@ function CourseUpdate() {
 }
 
 function GrayTop({title}) {
-    return <div>
+    return <div style={{height: 250, }}>
         <div >
 
         </div>
