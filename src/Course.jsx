@@ -67,10 +67,10 @@ function Course(props) {
                 variant="contained" 
                 margin="normal"
                 size="medium"
-                style={{}}
+                style={{display: 'flex', alignItems: 'center'}}
             > 
                 <EditIcon
-                    style={{marginRight: '4px'}}
+                    style={{marginRight: '4px', width: '16px'}}
                 />        
                 Edit
             </Button>
