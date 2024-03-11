@@ -63,7 +63,10 @@ function Course(props) {
                 {props.course.description}
             </Typography>
  
-            <Button>         
+            <Button> 
+                <EditIcon
+                    style={{marginRight: '4px'}}
+                />        
                 Edit
             </Button>
                 
