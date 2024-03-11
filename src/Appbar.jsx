@@ -55,6 +55,9 @@ function Appbar() {
                         variant="body" 
                         component="div"
                         style={{color: 'blue'}}
+                        onClick={() => {
+                            window.location = "/courses"
+                        }}
                     >
                         Courses
                     </Typography>
