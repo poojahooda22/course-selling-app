@@ -69,7 +69,7 @@ function Course(props) {
                 size="medium"
                 style={{display: 'flex', alignItems: 'center', fontSize: '16px'}}
                 onClick={() => {
-                    
+                    window.location ="/course/:courseId"
                 }}
             > 
                 <EditIcon
