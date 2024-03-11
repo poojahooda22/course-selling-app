@@ -22,7 +22,7 @@ function CourseUpdate() {
     }, []);
 
     if(!course) {
-        return <div style={{}}>
+        return <div style={{height: "100vh", justifyCenter: "center"}}>
             Loading...
         </div>
     }
