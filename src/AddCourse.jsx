@@ -75,9 +75,9 @@ function AddCourse() {
                 style={{
                     marginTop: '16px',        
                 }}
-                onClick={() => {
+                onClick={async () => {
                     
-                    fetch('http://localhost:3000/admin/courses', {
+                    await('http://localhost:3000/admin/courses', {
                         method: 'POST',
                         body: JSON.stringify({
                             title: title,
