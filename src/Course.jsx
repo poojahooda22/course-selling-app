@@ -67,6 +67,7 @@ function Course(props) {
                 variant="contained" 
                 margin="normal"
                 size="medium"
+                style={{}}
             > 
                 <EditIcon
                     style={{marginRight: '4px'}}
