@@ -77,17 +77,14 @@ function AddCourse() {
                 style={{
                     marginTop: '16px',        
                 }}
-                onClick={async () => {
-                    
+                onClick={async () => { 
                     await axios.post('http://localhost:3000/admin/courses', {
-                
-                        body: JSON.stringify({
-                            title: title,
+                        title: title,
                             description: description,
                             imageLink: image,
                             price: price,
                             published: true
-                        }),
+                    }
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": "Bearer " + localStorage.getItem("token")
