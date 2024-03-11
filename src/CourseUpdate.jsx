@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
-import Course from './Course';
+import CourseCard from './CourseCard';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -29,9 +29,9 @@ function CourseUpdate() {
     }
 
     return (
-        <div>
+        <div style={{}}>
             <GrayTop title={course.title}/>
-            <Course course={course} />    
+            <CourseCard course={course} />  
             <UpdatedCard  course={course} setCourse={setCourse} />
         </div>
     )
@@ -41,24 +41,23 @@ function GrayTop({title}) {
     return <div style={{height: 250, background: "#212121", top: 0, width: '100vw', zIndex: 0, marginBottom: '-250px' }}>
         <div style={{ height: 250, display: 'flex', justifyContent: 'center', flexDirection: 'column'}} >
             <div>
-            <Typography 
-                variant="h3" 
-                component="div" 
-                style={{marginTop: '12px'}}
-            >
-                {title}
-            </Typography>
+                <Typography 
+                    variant="h4" 
+                    component="div" 
+                    style={{color: 'white', textAlign: 'center', fontWeight: '600'}}
+                >
+                    {title}
+                </Typography>
             </div>
         </div>
     </div>
 }
 
-function UpdatedCard(props) {
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
-    const [price, setPrice] = useState("");
-    const [image, setImage] = useState("");
-    const course = props.course;
+function UpdatedCard({course, setCourse}) {
+    const [title, setTitle] = useState(course.title);
+    const [description, setDescription] = useState(course.description);
+    const [price, setPrice] = useState(course.price);
+    const [image, setImage] = useState(course.imageLink);
    
   return (
     <div
@@ -76,41 +75,45 @@ function UpdatedCard(props) {
             }}
         >
             <TextField 
+                 value={title}
                 onChange={(e) => {
                     setTitle(e.target.value)
                 }}
                 style={{width: '360px'}} 
-                label="Title" 
+                label="Title"
                 variant="outlined" 
                 size="small" 
                 margin="normal" 
             />
-            <TextField  
+            <TextField 
+                value={description} 
                 onChange={(e) => {
                     setDescription(e.target.value)
                 }}
                 style={{width: '360px'}} 
-                label="description" 
+                label="description"
                 variant="outlined" 
                 size="small" 
                 margin="normal" 
             />
-            <TextField  
+            <TextField 
+                value={price} 
                 onChange={(e) => {
                     setPrice(e.target.value)
                 }}
                 style={{width: '360px'}} 
-                label="price" 
+                label="price"
                 variant="outlined" 
                 size="small" 
                 margin="normal" 
             />
-            <TextField  
+            <TextField 
+                value={image} 
                 onChange={(e) => {
                     setImage(e.target.value)
                 }}
                 style={{width: '360px'}} 
-                label="Image link" 
+                label="image link"
                 variant="outlined"
                 size="small"
                 margin="normal"  
@@ -122,42 +125,28 @@ function UpdatedCard(props) {
                 style={{
                     marginTop: '16px',        
                 }}
-                onClick={() => {
-                    function callback2(data) {
-                        // alert("course updated!");
-                        let updatedCourses = [];
-                        for(let i=0; i<props.courses.length; i++) {
-                            if(props.courses[i].id == course.id) {
-                                updatedCourses.push({
-                                    id: course.id,
-                                    title: title,
-                                    description: description,
-                                    imageLink: image,
-                                    price: price,
-                                })
-                            } else {
-                                updatedCourses.push(props.courses[i]);                            
-                            }
-                        }
-                        props.setCourses(updatedCourses);
-                    }
-                    function callback(res) {
-                        res.json().then(callback2);
-                    }
-                    fetch('http://localhost:3000/admin/course/' + course.id, {
-                        method: 'PUT',
-                        body: JSON.stringify({
-                            title: title,
-                            description: description,
-                            imageLink: image,
-                            price: price,
-                            published: true
-                        }),
+                onClick={async () => {
+                    axios.put('http://localhost:3000/admin/courses/' + course._id,  {
+                        title: title,
+                        description: description,
+                        price: price,
+                        imageLink: image,
+                        published: true,
+                    }, {
                         headers: {
                             "Content-Type": "application/json",
-                            "Authorization": "Bearer " + localStorage.getItem("token")
+                            "Authorization": "Bearer " + localStorage.getItem("token"),
+
                         }
-                    }).then(callback)
+                    });
+                    let updatedCourse = {
+                        _id: course._id,
+                        title: title,
+                        description: description,
+                        price: price,
+                        imageLink: image,
+                    };
+                    setCourse(updatedCourse);
                 }}
             >
                 Update Course
