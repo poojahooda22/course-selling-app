@@ -52,11 +52,18 @@ function Appbar() {
                     }}
                 >
                     <Typography 
-                        variant="h6" 
+                        variant="body" 
                         component="div"
                         style={{color: 'blue'}}
                     >
                         Courses
+                    </Typography>
+                    <Typography 
+                        variant="body" 
+                        component="div"
+                        style={{color: 'blue'}}
+                    >
+                        Add Course
                     </Typography>
                     <div>
                         <Avatar 
