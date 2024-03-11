@@ -5,6 +5,7 @@ import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
+import Typography from '@mui/material/Typography';
 
 function CourseUpdate() {
     let { courseId} = useParams();
@@ -40,7 +41,13 @@ function GrayTop({title}) {
     return <div style={{height: 250, background: "#212121", top: 0, width: '100vw', zIndex: 0, marginBottom: '-250px' }}>
         <div style={{ height: 250, display: 'flex', justifyContent: 'center'}} >
             <div>
-                
+            <Typography 
+                variant="h5" 
+                component="div" 
+                style={{marginTop: '12px'}}
+            >
+                {title}
+            </Typography>
             </div>
         </div>
     </div>
