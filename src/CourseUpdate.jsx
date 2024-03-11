@@ -16,6 +16,8 @@ function CourseUpdate() {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("token"),
             }
+        }).then(res => {
+            setCourse(res.data.course);       
         })
     }, []);
 
