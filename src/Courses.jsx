@@ -21,7 +21,7 @@ function Courses() {
     }).then(callback1)
   }, []);
 
-  return <div style={{display: 'flex', flexWrap: 'wrap'}}>
+  return <div style={{display: 'flex', flexWrap: 'wrap', justifyCenter: 'center'}}>
     {courses.map(course => (
       <Course course={course} key={course.id} />
     ))} 
