@@ -84,12 +84,13 @@ function AddCourse() {
                             imageLink: image,
                             price: price,
                             published: true
-                    }
+                    }, {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": "Bearer " + localStorage.getItem("token")
                         }
-                    }).then(callback)
+                    }   
+                    });
                 }}
             >
                 Add Course
