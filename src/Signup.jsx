@@ -73,7 +73,7 @@ function Signup() {
                         marginTop: '16px',        
                     }}
                     onClick={async () => {
-                        const response = await axios.post("http://localhost:3001/signup", {
+                        const response = await axios.post("http://localhost:3000/admin/signup", {
                             username: email,
                             password: password
                         })
