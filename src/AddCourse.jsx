@@ -76,12 +76,7 @@ function AddCourse() {
                     marginTop: '16px',        
                 }}
                 onClick={() => {
-                    function callback2(data) {
-                        alert("course added!");
-                    }
-                    function callback(res) {
-                        res.json().then(callback2);
-                    }
+                    
                     fetch('http://localhost:3000/admin/courses', {
                         method: 'POST',
                         body: JSON.stringify({
