@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Icon from '@mui/material/Icon';
 import Button from '@mui/material/Button';
+import EditIcon from '@mui/icons-material/Edit';
 
 function Course(props) {
     return <div 
