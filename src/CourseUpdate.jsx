@@ -8,22 +8,10 @@ import TextField from '@mui/material/TextField';
 
 function CourseUpdate() {
     let { courseId} = useParams();
-    const[courses, setCourses] = useState([]);
+    const[course, setCourse] = useState([]);
 
     useEffect(() => {
-        function callback2(data) {
-          setCourses(data.courses);
-        }
-        function callback1(res) {
-          res.json().then(callback2);
-        }
-    
-        fetch("http://localhost:3000/admin/courses/", {
-          method: "GET",
-          headers: {
-            "Authorization": "Bearer " + localStorage.getItem("token"),
-          }
-        }).then(callback1)
+        
     }, []);
 
     let course = null;
@@ -139,7 +127,7 @@ function UpdatedCard(props) {
                     function callback(res) {
                         res.json().then(callback2);
                     }
-                    fetch('http://localhost:3000/admin/courses/' + course.id, {
+                    fetch('http://localhost:3000/admin/course/' + course.id, {
                         method: 'PUT',
                         body: JSON.stringify({
                             title: title,
