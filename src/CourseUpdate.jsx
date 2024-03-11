@@ -31,7 +31,7 @@ function CourseUpdate() {
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around'}}>
             <Course course={course} />   
             
-            <UpdatedCard courses={courses} course={course} setCourses={setCourses} />
+            <UpdatedCard  course={course} setCourse={setCourse} />
         </div>
     )
 }
