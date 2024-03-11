@@ -77,8 +77,8 @@ function AddCourse() {
                 }}
                 onClick={async () => {
                     
-                    await('http://localhost:3000/admin/courses', {
-                        method: 'POST',
+                    await axios.post('http://localhost:3000/admin/courses', {
+                
                         body: JSON.stringify({
                             title: title,
                             description: description,
