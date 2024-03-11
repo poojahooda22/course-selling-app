@@ -11,7 +11,10 @@ function CourseUpdate() {
     const[course, setCourse] = useState([]);
 
     useEffect(() => {
-        
+        Axios.get('http://localhost:3000/admin/course/' + courseId, {
+            method: "GET",
+            
+        })
     }, []);
 
     let course = null;
