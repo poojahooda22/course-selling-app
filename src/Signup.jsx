@@ -76,7 +76,8 @@ function Signup() {
                             username: email,
                             password: password
                         })
-                        let data = 
+                        let data = response.data;
+                        
                     }}
                 >
                     Signup
