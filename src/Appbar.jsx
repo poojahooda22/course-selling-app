@@ -104,17 +104,31 @@ function Appbar() {
                 padding: "16px", 
             }}
         >
-            <Typography 
-                variant="h6" 
-                component="div"
-            >
-                Coursera
-            </Typography>
+            <div >
+                <Typography 
+                    variant="h6" 
+                    component="div"
+                >
+                    Coursera
+                </Typography>
+                <Button 
+                        variant="contained" 
+                        size="small"
+                        style={{ marginRight: "16px"}} 
+                        onClick={() => {
+                            window.location = "/login"
+                        }}     
+                >
+                    User Login
+                </Button>
+            </div>
             <div 
                 style={{
-                    display: "flex"
+                    display: "flex",
+                    
                 }}
             >
+                
                 <Button 
                     variant="contained" 
                     size="small"
