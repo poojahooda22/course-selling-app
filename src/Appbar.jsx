@@ -54,7 +54,7 @@ function Appbar() {
                     <Typography 
                         variant="body" 
                         component="div"
-                        style={{color: 'blue'}}
+                        style={{color: '#1976d2'}}
                         onClick={() => {
                             window.location = "/courses"
                         }}
@@ -64,7 +64,7 @@ function Appbar() {
                     <Typography 
                         variant="body" 
                         component="div"
-                        style={{color: 'blue'}}
+                        style={{color: '#1976d2'}}
                         onClick={() => {
                             window.location = "/addcourse"
                         }}
