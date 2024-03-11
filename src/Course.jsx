@@ -62,7 +62,7 @@ function Course(props) {
                 {props.course.description}
             </Typography>
  
-                    <Button>
+            <Button>
                         
                         Edit
                     </Button>
