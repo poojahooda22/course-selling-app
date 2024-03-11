@@ -68,6 +68,9 @@ function Course(props) {
                 margin="normal"
                 size="medium"
                 style={{display: 'flex', alignItems: 'center', fontSize: '16px'}}
+                onClick={() => {
+                    
+                }}
             > 
                 <EditIcon
                     style={{marginRight: '4px', width: '18px', height: '18px' }}
