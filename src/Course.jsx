@@ -2,6 +2,7 @@ import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Icon from '@mui/material/Icon';
+import Button from '@mui/material/Button';
 
 function Course(props) {
     return <div 
@@ -62,7 +63,9 @@ function Course(props) {
             </Typography>
 
                 <Stack>
-                    
+                    <Button>
+
+                    </Button>
                 </Stack>
         </Card>
     </div>
