@@ -91,6 +91,7 @@ function AddCourse() {
                         }
                     }   
                     });
+                    alert("Added Course!");
                 }}
             >
                 Add Course
