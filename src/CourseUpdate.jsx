@@ -28,7 +28,9 @@ function CourseUpdate() {
     }
 
     return (
-        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around'}}>
+        <div>
+            <GrayTop/>
+            
             <Course course={course} />    
             <UpdatedCard  course={course} setCourse={setCourse} />
         </div>
@@ -38,7 +40,7 @@ function CourseUpdate() {
 function GrayTop() {
     return <div>
         <div>
-            
+
         </div>
     </div>
 }
