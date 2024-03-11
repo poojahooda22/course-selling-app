@@ -54,8 +54,9 @@ function Appbar() {
                     <Typography 
                         variant="h6" 
                         component="div"
+                        style={{color: 'blue'}}
                     >
-                        Coursera
+                        Courses
                     </Typography>
                     <div>
                         <Avatar 
