@@ -31,7 +31,7 @@ function Signup() {
         >
             <Card 
                 style={{
-                    padding: '16px', width: 400, 
+                    padding: '16px',   width: 400, 
                     display:"flex", flexDirection: "column", 
                     justifyContent: "center",  alignItems: "center" 
                 }}
@@ -72,24 +72,7 @@ function Signup() {
                         marginTop: '16px',        
                     }}
                     onClick={() => {
-                        function callback2(data) {
-                            console.log(data);
-                            localStorage.setItem("token", data.token);
-                            window.location = "/";
-                        }
-                        function callback(res) {
-                            res.json().then(callback2);
-                        }
-                        fetch('http://localhost:3000/admin/signup', {
-                            method: 'POST',
-                            body: JSON.stringify({
-                                username: email,
-                                password: password
-                            }),
-                            headers: {
-                                "Content-Type": "application/json"
-                            }
-                        }).then(callback)
+                        
                     }}
                 >
                     Signup
