@@ -9,6 +9,9 @@ const router = express.Router();
 
 router.get('/me', authenticateJwt, async (req, res) => {
     const admin = await Admin.findOne({username: req.user.username});
+    if(!admin) {
+      
+    }
     res.json({
       username: admin.username
     })
