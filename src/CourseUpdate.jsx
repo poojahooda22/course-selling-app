@@ -22,7 +22,7 @@ function CourseUpdate() {
     }, []);
 
     if(!course) {
-        return <div>
+        return <div style={{}}>
             Loading...
         </div>
     }
