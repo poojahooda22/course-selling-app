@@ -29,11 +29,18 @@ function CourseUpdate() {
 
     return (
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around'}}>
-            <Course course={course} />   
-            
+            <Course course={course} />    
             <UpdatedCard  course={course} setCourse={setCourse} />
         </div>
     )
+}
+
+function GrayTop() {
+    return <div>
+        <div>
+            
+        </div>
+    </div>
 }
 
 function UpdatedCard(props) {
