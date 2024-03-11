@@ -52,10 +52,14 @@ function Appbar() {
                     }}
                 >
                     <div>
+                        
+                    </div>
+                    <div>
                         <Avatar 
                             src="/broken-image.jpg" 
                         />
                     </div>
+
                     <Button 
                         variant = "contained" 
                         size = "small"
