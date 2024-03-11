@@ -4,14 +4,14 @@ import Course from './Course';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-
+import axios from 'axios';
 
 function CourseUpdate() {
     let { courseId} = useParams();
     const[course, setCourse] = useState([]);
 
     useEffect(() => {
-        Axios.get('http://localhost:3000/admin/course/' + courseId, {
+        axios.get('http://localhost:3000/admin/course/' + courseId, {
             method: "GET",
 
         })
