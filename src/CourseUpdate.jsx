@@ -39,10 +39,10 @@ function CourseUpdate() {
 
 function GrayTop({title}) {
     return <div style={{height: 250, background: "#212121", top: 0, width: '100vw', zIndex: 0, marginBottom: '-250px' }}>
-        <div style={{ height: 250, display: 'flex', justifyContent: 'center'}} >
+        <div style={{ height: 250, display: 'flex', justifyContent: 'center', flexDirection: 'column'}} >
             <div>
             <Typography 
-                variant="h5" 
+                variant="h3" 
                 component="div" 
                 style={{marginTop: '12px'}}
             >
