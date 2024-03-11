@@ -13,16 +13,9 @@ function CourseUpdate() {
     useEffect(() => {
         Axios.get('http://localhost:3000/admin/course/' + courseId, {
             method: "GET",
-            
+
         })
     }, []);
-
-    let course = null;
-    for(let i = 0; i< courses.length; i++) {
-        if(courses[i].id == courseId) [
-            course = courses[i]
-        ]
-    }
 
     if(!course) {
         return <div>
