@@ -74,7 +74,7 @@ function Signup() {
                     onClick={async () => {
                         const response = await axios.post("http://localhost:3001/signup", {
                             username: email,
-                            
+                            password: password
                         })
                     }}
                 >
