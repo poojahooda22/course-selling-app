@@ -77,7 +77,8 @@ function Signup() {
                             password: password
                         })
                         let data = response.data;
-                        
+                        localStorage.setItem("token", )
+
                     }}
                 >
                     Signup
