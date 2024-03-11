@@ -64,7 +64,7 @@ function Course(props) {
  
             <Button>         
                 Edit
-                    </Button>
+            </Button>
                 
         </Card>
     </div>
