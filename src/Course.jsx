@@ -62,11 +62,12 @@ function Course(props) {
                 {props.course.description}
             </Typography>
 
-                <Stack>
+                
                     <Button>
-
+                        
+                        Edit
                     </Button>
-                </Stack>
+                
         </Card>
     </div>
  }
