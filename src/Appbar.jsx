@@ -51,9 +51,12 @@ function Appbar() {
                         gap: 12
                     }}
                 >
-                    <div>
-                        Courses
-                    </div>
+                    <Typography 
+                        variant="h6" 
+                        component="div"
+                    >
+                        Coursera
+                    </Typography>
                     <div>
                         <Avatar 
                             src="/broken-image.jpg" 
