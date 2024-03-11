@@ -48,7 +48,7 @@ function Appbar() {
                     style={{
                         display: "flex",
                         alignItems: "center",
-                        gap: 12
+                        gap: 16
                     }}
                 >
                     <Typography 
@@ -65,12 +65,12 @@ function Appbar() {
                     >
                         Add Course
                     </Typography>
-                    <div>
+                    {/* <div>
                         <Avatar 
                             src="/broken-image.jpg" 
                             style={{width: '24px', height: '24px'}}
                         />
-                    </div>
+                    </div> */}
 
                     <Button 
                         variant = "contained" 
