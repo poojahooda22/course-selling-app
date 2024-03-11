@@ -29,17 +29,17 @@ function CourseUpdate() {
 
     return (
         <div>
-            <GrayTop/>
-            
+            <GrayTop title={course.title}/>
+
             <Course course={course} />    
             <UpdatedCard  course={course} setCourse={setCourse} />
         </div>
     )
 }
 
-function GrayTop() {
+function GrayTop({title}) {
     return <div>
-        <div>
+        <div >
 
         </div>
     </div>
