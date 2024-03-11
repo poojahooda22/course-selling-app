@@ -70,7 +70,7 @@ function Course(props) {
                 style={{display: 'flex', alignItems: 'center', fontSize: '16px'}}
             > 
                 <EditIcon
-                    style={{marginRight: '4px', width: '16px', height: '18px' }}
+                    style={{marginRight: '4px', width: '18px', height: '18px' }}
                 />        
                 Edit
             </Button>
