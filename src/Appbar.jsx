@@ -52,7 +52,7 @@ function Appbar() {
                     }}
                 >
                     <div>
-                        
+                        Courses
                     </div>
                     <div>
                         <Avatar 
