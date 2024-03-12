@@ -104,7 +104,7 @@ function Appbar() {
                 padding: "16px", 
             }}
         >
-            <div >
+            <div style={{display: "flex", gap: 16}}>
                 <Typography 
                     variant="h6" 
                     component="div"
