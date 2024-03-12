@@ -79,7 +79,7 @@ function Signin() {
                         function callback(res) {
                             res.json().then(callback2);
                         }
-                        fetch('http://localhost:3000/admin/login', {
+                        fetch('http://localhost:3000/user/signup', {
                             method: 'POST',
                             headers: {
                                 "Content-Type": "application/json",
