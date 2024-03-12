@@ -46,7 +46,7 @@ function Course(props) {
                 {/* <T 
                     variant="h6" 
                     component="div" 
-                    style={{color: '#28c
+                    style={{color: 
             } */}
             </div>
             <Typography 
