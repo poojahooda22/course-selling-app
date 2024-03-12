@@ -83,7 +83,7 @@ function Signin() {
                             method: 'POST',
                             headers: {
                                 "Content-Type": "application/json",
-                                // "Authorization": "Bearer " + localStorage.getIte
+                                // "Authorization": "Bearer " + localStorage.getIt
                                 username: email,
                                 password: password
                             }
