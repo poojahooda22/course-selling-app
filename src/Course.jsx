@@ -47,8 +47,7 @@ function Course(props) {
                     variant="h6" 
                     component="div" 
                     style={{color: '#28c271'}}
-                >
-                    
+            } */}
             </div>
             <Typography 
                 variant="body1" 
