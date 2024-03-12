@@ -43,13 +43,13 @@ function Course(props) {
                 >
                     Rs {props.course.price}
                 </Typography>
-                {/* <Typography 
+                {/* <Typograph 
                     variant="h6" 
                     component="div" 
                     style={{color: '#28c271'}}
                 >
                     35% off
-                </Typography> }
+                </Typograph }
             </div>
             <Typography 
                 variant="body1" 
