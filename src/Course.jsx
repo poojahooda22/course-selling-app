@@ -48,8 +48,7 @@ function Course(props) {
                     component="div" 
                     style={{color: '#28c271'}}
                 >
-                    35% off
-                 
+                    35% off 
             </div>
             <Typography 
                 variant="body1" 
