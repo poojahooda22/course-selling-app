@@ -49,7 +49,7 @@ function Course(props) {
                     style={{color: '#28c271'}}
                 >
                     35% off
-                </Typography> */}
+                </Typography> }
             </div>
             <Typography 
                 variant="body1" 
