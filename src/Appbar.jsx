@@ -28,6 +28,7 @@ function Appbar() {
     if (isLoading) {
         return <div></div>;
     }
+    
     if(userEmail) {
         return (
             <div 
