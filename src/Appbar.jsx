@@ -77,7 +77,7 @@ function Appbar() {
                             src="/broken-image.jpg" 
                             style={{width: '24px', height: '24px'}}
                         />
-                    <*/}
+                    */}
 
                     <Button 
                         variant = "contained" 
