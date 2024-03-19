@@ -44,7 +44,7 @@ function GrayTop({title}) {
                 <Typography 
                     variant="h4" 
                     component="div" 
-                    style={{color: 'white', textAlign: 'center', fontWeight: '600'}} >
+                    style={{color: 'white', textAlign: 'center', fontWeight: '600'}}>
                     {title}
                 </Typography>
             </div>
