@@ -74,7 +74,7 @@ function Appbar() {
                     </Typography>
                     {/* <*>
                         <Avatar 
-                            s
+                         
                     */}
 
                     <Button 
