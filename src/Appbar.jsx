@@ -73,7 +73,7 @@ function Appbar() {
                         Add Course
                     </Typography>
                     {/* <*>
-                        <Ava 
+                        <Av
                     */}
 
                     <Button 
