@@ -75,7 +75,7 @@ function Appbar() {
                     {/* <*>
                         <Avatar 
                             src="/broken-image.jpg" 
-                            style={{width: '24
+                            style={{width: '
                     */}
 
                     <Button 
