@@ -72,9 +72,7 @@ function Appbar() {
                     >
                         Add Course
                     </Typography>
-                    {/* 
-                     
-                    */}
+                    {}
 
                     <Button 
                         variant = "contained" 
