@@ -72,12 +72,12 @@ function Appbar() {
                     >
                         Add Course
                     </Typography>
-                    {/* <div*>
+                    {/* <di*>
                         <Avatar 
                             src="/broken-image.jpg" 
                             style={{width: '24px', height: '24px'}}
                         />
-                    </div*/}
+                    </di*/}
 
                     <Button 
                         variant = "contained" 
