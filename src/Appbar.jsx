@@ -6,7 +6,6 @@ import Button from '@mui/material/Button';
 function Appbar() {
     const [userEmail, setUserEmail] = useState(null);
     const [isLoading, setLoading] = useState(false);
-
     useEffect(() => {
         function callback2(data) {
             if(data.username) {
