@@ -44,8 +44,7 @@ function Course(props) {
                     Rs {props.course.price}
                 </Typography>
                 {/* <T 
-                    variant="h6"     
-            } */}
+                    variant="h6"     */}
             </div>
             <Typography 
                 variant="body1" 
