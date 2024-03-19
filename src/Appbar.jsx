@@ -74,7 +74,7 @@ function Appbar() {
                     </Typography>
                     {/* <*>
                         <Avatar 
-                            src="/broken-image.jp  
+                            src="/broken-image.j 
                     */}
 
                     <Button 
