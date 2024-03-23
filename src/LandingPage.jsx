@@ -3,16 +3,17 @@ import Button from '@mui/material/Button';
 
 function LandingPage() {
     return (
-        <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+        <>
+        <div style={{display: "flex",alignItems: "center", justifyContent: "space-around", margin: "30px"}}>
             <div>
                 <Typography 
-                    variant="h1" 
+                    variant="h2" 
                     component="div"
                 >
                     Course Admin
                 </Typography>
                 <Typography 
-                    variant="h6" 
+                    variant="body" 
                     component="div"
                     style={{marginBottom: "16px"}}
                 >
@@ -42,13 +43,15 @@ function LandingPage() {
             </div>  
             <div>
                 <img
-                style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover"}}
-                src="https://img.freepik.com/free-vector/woman-getting-knowledge-online-school-vector-illustration_74855-4823.jpg?t=st=1711182155~exp=1711185755~hmac=5d2a55c37153cb020cf81945c9ccad9b3b63daab2a450b70d3305ab2d2f76611&w=1060"/>
+                    style={{
+                    width: "450px",
+                    height: "450px",
+                    objectFit: "contain"}}
+                    src="https://img.freepik.com/free-photo/science-dna-research-development-human_53876-121145.jpg?w=1060&t=st=1711182657~exp=1711183257~hmac=139d0cdd7e5a9f4dc39dfc8cd4798739731aadbf32f9ae882467841eda4809f8"
+                />
             </div> 
         </div>
+        </>
     )
 }
 
