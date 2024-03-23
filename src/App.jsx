@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AddCourse from './AddCourse';
 import Courses from './Courses';
 import CourseUpdate from './CourseUpdate';
+import LandingPage from './LandingPage';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Appbar />
       <Router>
         <Routes>
-        <Route path="/" element={} />
+        <Route path="/" element={<LandingPage />} />
           <Route path="/addcourse" element={<AddCourse />} />
           <Route path="/course/:courseId" element={<CourseUpdate />} />
           <Route path="/courses" element={<Courses />} />
