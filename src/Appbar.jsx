@@ -105,7 +105,7 @@ function Appbar() {
                 >
                     Coursera
                 </Typography>
-                <Button 
+                {/* <Button 
                         variant="contained" 
                         size="small"
                         style={{ marginRight: "16px"}} 
@@ -114,7 +114,7 @@ function Appbar() {
                         }}     
                 >
                     User Login
-                </Button>
+                </Button> */}
             </div>
             <div 
                 style={{
