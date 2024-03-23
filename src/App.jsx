@@ -14,6 +14,7 @@ function App() {
       <Appbar />
       <Router>
         <Routes>
+        <Route path="/" element={} />
           <Route path="/addcourse" element={<AddCourse />} />
           <Route path="/course/:courseId" element={<CourseUpdate />} />
           <Route path="/courses" element={<Courses />} />
