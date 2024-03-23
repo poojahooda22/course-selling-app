@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 
 function LandingPage() {
     return (
-        <div>
+        <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
             <div>
                 <Typography 
                     variant="h1" 
