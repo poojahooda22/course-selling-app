@@ -39,7 +39,15 @@ function LandingPage() {
                 >
                     Login
                 </Button>
-            </div>   
+            </div>  
+            <div>
+                <img
+                style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover"}}
+                src="https://img.freepik.com/free-vector/woman-getting-knowledge-online-school-vector-illustration_74855-4823.jpg?t=st=1711182155~exp=1711185755~hmac=5d2a55c37153cb020cf81945c9ccad9b3b63daab2a450b70d3305ab2d2f76611&w=1060"/>
+            </div> 
         </div>
     )
 }
