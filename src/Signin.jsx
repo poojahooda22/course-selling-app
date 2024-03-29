@@ -71,24 +71,24 @@ function Signin() {
                     style={{
                         marginTop: '16px',        
                     }}
-                    onClick={() => {
-                        function callback2(data) {
-                            console.log(data);
-                            localStorage.setItem("token", data.token)
-                        }
-                        function callback(res) {
-                            res.json().then(callback2);
-                        }
-                        fetch('http://localhost:3000/user/signup', {
-                            method: 'POST',
-                            headers: {
-                                "Content-Type": "application/json",
-                                // "Authorization": "Bearer " + localStorage.ge
-                                username: email,
-                                password: password
-                            }
-                        }).then(callback)
-                    }}
+                    // onClick={() => {
+                    //     function callback2(data) {
+                    //         console.log(data);
+                    //         localStorage.setItem("token", data.token)
+                    //     }
+                    //     function callback(res) {
+                    //         res.json().then(callback2);
+                    //     }
+                    //     fetch('http://localhost:3000/user/signup', {
+                    //         method: 'POST',
+                    //         headers: {
+                    //             "Content-Type": "application/json",
+                    //             // "Authorization": "Bearer " + localStorage.ge
+                    //             username: email,
+                    //             password: password
+                    //         }
+                    //     }).then(callback)
+                    // }}
                 >
                     Login
                 </Button>
