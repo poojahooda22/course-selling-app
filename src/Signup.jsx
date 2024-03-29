@@ -5,6 +5,7 @@ import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from '../src/config';
 
 function Signup() {
     const [email, setEmail] = useState("");
@@ -73,7 +74,7 @@ function Signup() {
                         marginTop: '16px',        
                     }}
                     onClick={async() => {
-                        const response = await axios.post("http://localhost:3000/admin/signup", {
+                        const response = await axios.post(`${BASE_URL}/admin/signup`, {
                             username: email,
                             password: password
                         })
