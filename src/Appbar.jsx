@@ -1,27 +1,26 @@
 import { useEffect, useState } from 'react';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-//  
+import axios from 'axios';
+import { BASE_URL } from '../src/config';
 
 function Appbar() {
     const [userEmail, setUserEmail] = useState(null);
     const [isLoading, setLoading] = useState(false);
-    useEffect(() => {
-        function callback2(data) {
-            if(data.username) {
-                setUserEmail(data.username);
-                setLoading(false);
-            }
-        }
-        function callback(res) {
-            res.json().then(callback2);
-        }
-        fetch('http://localhost:3000/admin/me', { 
-            method: "GET",
+
+    const init = async () => {
+        const response = await axios.get(`${BASE_URL}/admin/me`, {
             headers: {
-                "Authorization": "Bearer " + localStorage.getItem("token"),
+                Authorization: `Bearer ${localStorage.getItem("token")}`
             }
-        }).then(callback)
+        })
+        if (response.data.username) {
+            setUserEmail(response.data.username);
+        
+        }
+    }
+    useEffect(() => {
+        init();
     },[]); 
 
     if (isLoading) {
@@ -137,7 +136,7 @@ function Appbar() {
                 <Button 
                     variant="contained" 
                     size="small"
-                    color={"secondary"}  
+                    color={"primary"}  
                     onClick={() => {
                         window.location = "/login"
                     }}     
