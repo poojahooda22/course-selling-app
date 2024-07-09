@@ -10,7 +10,7 @@ function AddCourse() {
 
   return (
     <div
-    >
+>
         <Card 
             style={{
                 padding: '18px', 
