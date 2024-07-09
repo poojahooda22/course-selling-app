@@ -1,13 +1,15 @@
 import Button from '@mui/material/Button';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 
 const Appbar = () => {
+    const [userEmail, setUserEmail] = useState("")
 
     useEffect(() => {
 
         function callback2(data) {
             console.log(data)
+            setUserEmail(data.email)
         }
 
         function callbackFn(res) {
