@@ -10,7 +10,6 @@ function AddCourse() {
 
   return (
     <div
-
     >
         <Card 
             style={{
