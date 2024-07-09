@@ -7,10 +7,6 @@ import axios from 'axios';
 
 
 function AddCourse() {
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
-    const [price, setPrice] = useState("");
-    const [image, setImage] = useState("");
 
   return (
     <div
@@ -31,9 +27,7 @@ function AddCourse() {
             }}
         >
             <TextField 
-                onChange={(e) => {
-                    setTitle(e.target.value)
-                }}
+                onChange={() => {}}
                 style={{width: '360px'}} 
                 label="Title" 
                 variant="outlined" 
@@ -41,9 +35,7 @@ function AddCourse() {
                 margin="normal" 
             />
             <TextField  
-                onChange={(e) => {
-                    setDescription(e.target.value)
-                }}
+                onChange={() => {}}
                 style={{width: '360px'}} 
                 label="description" 
                 variant="outlined" 
@@ -51,9 +43,7 @@ function AddCourse() {
                 margin="normal" 
             />
             <TextField  
-                onChange={(e) => {
-                    setPrice(e.target.value)
-                }}
+                onChange={() => {}}
                 style={{width: '360px'}} 
                 label="price" 
                 variant="outlined" 
@@ -61,9 +51,7 @@ function AddCourse() {
                 margin="normal" 
             />
             <TextField  
-                onChange={(e) => {
-                    setImage(e.target.value)
-                }}
+                onChange={() => {}}
                 style={{width: '360px'}} 
                 label="Image link" 
                 variant="outlined"
@@ -77,21 +65,7 @@ function AddCourse() {
                 style={{
                     marginTop: '16px',        
                 }}
-                onClick={async () => { 
-                    await axios.post('http://localhost:3000/admin/courses', {
-                        title: title,
-                            description: description,
-                            imageLink: image,
-                            price: price,
-                            published: true
-                    }, {
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Authorization": "Bearer " + localStorage.getItem("token")
-                        } 
-                    });
-                    alert("Added Course!");
-                }}
+                onClick={async () => {}}
             >
                 Add Course
             </Button>
