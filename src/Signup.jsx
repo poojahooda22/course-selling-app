@@ -3,13 +3,13 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
-import { useState } from 'react';
-import axios from 'axios';
-import { BASE_URL } from '../src/config';
+// import { useState } from 'react';
+// import axios from 'axios';
+// import { BASE_URL } from '../src/config';
 
 function Signup() {
-    const [email, setEmail] = useState("");
-    const [password,  setPassword] = useState("");
+    // const [email, setEmail] = useState("");
+    // const [password,  setPassword] = useState("");
 
   return (
     <div>
@@ -50,10 +50,7 @@ function Signup() {
                         variant="outlined" 
                         size="small" 
                         margin="normal" 
-                        onChange={(e) => {
-                            console.log(e);
-                            setEmail(e.target.value)
-                        }}
+
                     />
                     <TextField 
                         label="Password" 
@@ -61,9 +58,7 @@ function Signup() {
                         variant="outlined" 
                         size="small" 
                         margin="normal"
-                        onChange={(e) => {
-                            setPassword(e.target.value)
-                        }}
+
                     />
                 </div>
                 <Button 
@@ -73,15 +68,10 @@ function Signup() {
                     style={{
                         marginTop: '16px',        
                     }}
-                    onClick={async() => {
-                        const response = await axios.post(`${BASE_URL}/admin/signup`, {
-                            username: email,
-                            password: password
-                        })
-                        let data = response.data;
-                        localStorage.setItem("token", data.token );
-                        window.location = "/"
+                    onClick={() => {
+                        
                     }}
+
                 >
                     Signup
                 </Button>
