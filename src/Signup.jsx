@@ -3,13 +3,13 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
-// import { useState } from 'react';
+import { useState } from 'react';
 // import axios from 'axios';
 // import { BASE_URL } from '../src/config';
 
 function Signup() {
-    // const [email, setEmail] = useState("");
-    // const [password,  setPassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [password,  setPassword] = useState("");
 
   return (
     <div>
@@ -22,7 +22,7 @@ function Signup() {
             }}
         >
             <Typography variant="h5" component="div">
-                Welcome to Coursera
+                Welcome to Coursera {email}
             </Typography>
         </div>
         <div 
@@ -50,7 +50,7 @@ function Signup() {
                         variant="outlined" 
                         size="small" 
                         margin="normal" 
-
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                     <TextField 
                         label="Password" 
@@ -58,7 +58,7 @@ function Signup() {
                         variant="outlined" 
                         size="small" 
                         margin="normal"
-
+                        
                     />
                 </div>
                 <Button 
