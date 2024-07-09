@@ -58,7 +58,7 @@ function Signup() {
                         variant="outlined" 
                         size="small" 
                         margin="normal"
-                        
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
                 <Button 
