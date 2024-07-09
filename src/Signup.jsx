@@ -78,6 +78,7 @@ function Signup() {
                         }
                         fetch('http://localhost:3000/admin/signup', {
                             method: "POST",
+                            body: JSON.stringify({username: email, password}),
                             headers: {
                                 "Content-Type": "application/json"
                             },
