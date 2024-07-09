@@ -9,7 +9,7 @@ import axios from 'axios';
 function AddCourse() {
 
   return (
-    <div className=''>
+    <div className='flex items-center justify-center'>
         <Card 
             style={{
                 padding: '18px', 
