@@ -1,13 +1,11 @@
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Signup from './Signup';
+
 import Appbar from './Appbar';
+import Signup from './Signup';
 import Signin from './Signin';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AddCourse from './AddCourse';
-import Courses from './Courses';
-import CourseUpdate from './CourseUpdate';
-import LandingPage from './LandingPage';
+
+
 
 function App() {
   return (
@@ -15,14 +13,10 @@ function App() {
       <Appbar />
       <Router>
         <Routes>
-        <Route path="/" element={<LandingPage />} />
-          <Route path="/addcourse" element={<AddCourse />} />
-          <Route path="/course/:courseId" element={<CourseUpdate />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/login" element={<Signin />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/signup" element={<Signup/>} />
+          <Route path="/login" element={<Signin/>} />
         </Routes>
-    </Router>
+      </Router>
     </div> 
   )
 }
