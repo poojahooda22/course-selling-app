@@ -9,8 +9,7 @@ import axios from 'axios';
 function AddCourse() {
 
   return (
-    <div
->
+    <div>
         <Card 
             style={{
                 padding: '18px', 
