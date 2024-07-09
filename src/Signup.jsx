@@ -22,7 +22,7 @@ function Signup() {
             }}
         >
             <Typography variant="h5" component="div">
-                Welcome to Coursera {email}
+                Welcome to Coursera 
             </Typography>
         </div>
         <div 
@@ -71,7 +71,7 @@ function Signup() {
                     onClick={() => {
                         
                         function callback2(data) {
-                            console.log(data)
+                           localStorage.setItem("token", data.token);
                         }
                         function callback(response) {
                             response.json().then(callback2)
