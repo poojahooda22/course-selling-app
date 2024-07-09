@@ -70,6 +70,18 @@ function Signup() {
                     }}
                     onClick={() => {
                         
+                        function callback2(data) {
+                            console.log(data)
+                        }
+                        function callback(response) {
+                            response.json().then(callback2)
+                        }
+                        fetch('http://localhost:3000/admin/signup', {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                        }).then(callback)
                     }}
 
                 >
