@@ -4,8 +4,32 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { useEffect } from 'react';
 
 const Courses = () => {
+
+    useEffect(() => {
+      function callback2(data){
+        console.log(data)
+    }
+    function callback1(res) {
+        res.json().then(callback2)
+    }
+    fetch('http://localhost:3000/admin/courses', {
+        method: "POST",
+        body: JSON.stringify({
+            title: 'title',
+            description: 'description',
+            price: 'price',
+            imageLink: 'image',
+            prescribed: true
+        }),
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
+        }
+    }).then(callback1)
+    })
   return (
     <div className='flex items-center justify-center'>
       <Card sx={{ minWidth: 345 }}>
