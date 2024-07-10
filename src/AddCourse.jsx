@@ -57,7 +57,9 @@ function AddCourse() {
                 style={{
                     marginTop: '16px',        
                 }}
-                onClick={async () => {}}
+                onClick={() => {
+                    
+                }}
             >
                 Add Course
             </Button>
