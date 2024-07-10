@@ -22,7 +22,7 @@ const Courses = () => {
             Heat 1/2 cup of the 
           </Typography>
       </CardContent>
-    </Card>
+      </Card>
     </div>
     
   )
