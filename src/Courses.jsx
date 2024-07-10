@@ -19,7 +19,7 @@ const Courses = () => {
             This impressive paella is a perfect party dish and a fun meal to cook
           </Typography>
           <Typography paragraph>
-              Heat 1/2 cup of the 
+            Heat 1/2 cup of the 
           </Typography>
         </CardContent>
       </Card>
