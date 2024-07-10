@@ -12,7 +12,7 @@ const Courses = () => {
           component="img"
           height="194"
           image="/static/images/cards/paella.jpg"
-        alt="Paella dish"
+          alt="Paella dish"
         />
       <CardContent>
         <Typography variant="body1" color="text.secondary">
