@@ -61,7 +61,7 @@ router.put('/courses/:courseId', authenticateJwt, async (req, res) => {
   if(course) {
       res.json({message: 'course updated successfully'});
   } else {
-      res.status(404).json({ message: 'course not found'});
+    res.status(404).json({ message: 'course not found'});
   }
 });
 
