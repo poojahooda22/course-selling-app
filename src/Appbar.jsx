@@ -3,13 +3,14 @@ import { useEffect, useState } from 'react';
 
 
 const Appbar = () => {
-    const [userEmail, setUserEmail] = useState("")
+    const [userEmail, setUserEmail] = useState(null)
 
     useEffect(() => {
 
         function callback2(data) {
-            console.log(data)
-            setUserEmail(data.email)
+            if(data.username) {
+                setUserEmail(data.username)
+            }    
         }
 
         function callbackFn(res) {
@@ -22,7 +23,40 @@ const Appbar = () => {
               "Authorization": "Bearer" + localStorage.getItem("token")
             }
         }).then(callbackFn)
-    })
+    }, []);
+
+    if (userEmail) {
+        return (
+            <>
+        <div className='w-full flex items-center justify-between px-[2vw]'>
+            <h2 className='text-[1.5vw] font-bold'>Courera</h2>
+            <div className='flex gap-4'>
+                <Button 
+                    variant="contained" 
+                    margin="normal"
+                    size="large"
+                    style={{marginTop: '16px'}}
+                >
+                    {userEmail}
+                </Button>
+                <Button 
+                    variant="contained" 
+                    margin="normal"
+                    size="large"
+                    style={{
+                        marginTop: '16px',        
+                    }}
+                    onClick={() => {
+                        window.location ='/login'
+                    }}
+                >
+                    Logout
+                </Button>
+            </div>
+        </div>
+    </>
+        )
+    }
 
 
     return (
