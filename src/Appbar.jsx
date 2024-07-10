@@ -1,8 +1,10 @@
 import Button from '@mui/material/Button';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Appbar = () => {
+    const navigate = useNavigate();
     const [userEmail, setUserEmail] = useState(null)
 
    useEffect(() => {
@@ -42,7 +44,7 @@ const Appbar = () => {
                     }}
                     onClick={() => {
                         localStorage.setItem("token", null)
-                        window.location = "/" //this is to instantly refresh the page
+                        navigate("/") //this is to instantly refresh the page
                     }}
                 >
                     Logout
@@ -65,7 +67,7 @@ const Appbar = () => {
                         marginTop: '16px',        
                     }}
                     onClick={() => {
-                        window.location ='/signup'
+                        navigate('/signup')
                     }}
                 >
                     Signup
@@ -78,7 +80,7 @@ const Appbar = () => {
                         marginTop: '16px',        
                     }}
                     onClick={() => {
-                        window.location ='/login'
+                        navigate('/login')
                     }}
                 >
                     Login
