@@ -26,8 +26,7 @@ const Appbar = () => {
     }, []);
 
     if (userEmail) {
-        return (
-            <>
+        return <>
         <div className='w-full flex items-center justify-between px-[2vw]'>
             <h2 className='text-[1.5vw] font-bold'>Courera</h2>
             <div className='flex gap-4'>
@@ -47,16 +46,14 @@ const Appbar = () => {
                         marginTop: '16px',        
                     }}
                     onClick={() => {
-                        window.location ='/login'
+                        localStorage.setItem("token", null)
                     }}
                 >
                     Logout
                 </Button>
             </div>
         </div>
-    </>
-        )
-    }
+    </> }
 
 
     return (
