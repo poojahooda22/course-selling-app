@@ -5,25 +5,21 @@ import { useEffect, useState } from 'react';
 const Appbar = () => {
     const [userEmail, setUserEmail] = useState(null)
 
-    useEffect(() => {
+   useEffect(() => {
 
         function callback2(data) {
-            if(data.username) {
-                setUserEmail(data.username)
-            }    
+            console.log(data)
         }
-
-        function callbackFn(res) {
+        function callback1(res) {
             res.json().then(callback2)
         }
-
         fetch("http://localhost:3000/admin/me", {
             method: "GET",
             headers: {
-              "Authorization": "Bearer" + localStorage.getItem("token")
+                "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
-        }).then(callbackFn)
-    }, []);
+        }).then(callback1)
+   }, [])
 
     if (userEmail) {
         return <>
