@@ -5,9 +5,9 @@ import CardActions from '@mui/material/CardActions';
 
 const Courses = () => {
   return (
-    <div>
+    <card sx={{ maxWidth: 345 }}>
       
-    </div>
+    </card>
   )
 }
 
