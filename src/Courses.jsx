@@ -15,12 +15,12 @@ const Courses = () => {
           alt="Paella dish"
         />
         <CardContent>
-        <Typography variant="body1" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-        </Typography>
-        <Typography paragraph>
-            Heat 1/2 cup of the 
+          <Typography variant="body1" color="text.secondary">
+            This impressive paella is a perfect party dish and a fun meal to cook
           </Typography>
+          <Typography paragraph>
+              Heat 1/2 cup of the 
+            </Typography>
         </CardContent>
       </Card>
     </div>
