@@ -14,7 +14,7 @@ const Courses = () => {
           image="/static/images/cards/paella.jpg"
           alt="Paella dish"
         />
-      <CardContent>
+        <CardContent>
         <Typography variant="body1" color="text.secondary">
           This impressive paella is a perfect party dish and a fun meal to cook
         </Typography>
