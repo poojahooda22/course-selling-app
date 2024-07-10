@@ -12,9 +12,10 @@ import Courses from './Courses';
 function App() {
   return (
     <div style={{width: "100vw", height:"100vh", backgroundColor: "#111", color: '#fff' }}>
-      <Appbar />
       <Router>
+      <Appbar />
         <Routes>
+          
           <Route path="/signup" element={<Signup/>} />
           <Route path="/login" element={<Signin/>} />
           <Route path="/addcourse" element={<AddCourse/>} />
