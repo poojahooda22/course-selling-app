@@ -9,7 +9,7 @@ const Courses = () => {
     <div>
         <Card sx={{ maxWidth: 345 }}>
         <CardMedia
-        component="img"
+          component="img"
         height="194"
         image="/static/images/cards/paella.jpg"
         alt="Paella dish"
