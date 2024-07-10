@@ -16,7 +16,7 @@ const Courses = () => {
         res.json().then(callback2)
     }
     fetch('http://localhost:3000/admin/courses', {
-        method: "POST",
+        method: "GET",
         body: JSON.stringify({
             title: 'title',
             description: 'description',
