@@ -58,7 +58,25 @@ function AddCourse() {
                     marginTop: '16px',        
                 }}
                 onClick={() => {
-                    
+                    function callback2(data){
+                        console.log(data)
+                    }
+                    function callback1(res) {
+                        res.json().then(callback2)
+                    }
+                    fetch('http://localhost:3000/admin/courses', {
+                        method: "POST",
+                        body: JSON.stringify({
+                            title: "title",
+                            description: "description",
+                            price: "price",
+                            image: "image",
+                        }),
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": `Bearer ${localStorage.getItem("token")}`
+                        }
+                    }).then(callback1)
                 }}
             >
                 Add Course
