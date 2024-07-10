@@ -44,7 +44,7 @@ const Appbar = () => {
                     }}
                     onClick={() => {
                         localStorage.setItem("token", null)
-                        navigate("/") //this is to instantly refresh the page
+                        window.location ="/" //this is to instantly refresh the page
                     }}
                 >
                     Logout
