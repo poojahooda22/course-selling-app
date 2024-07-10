@@ -2,9 +2,13 @@
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-
+import { useState } from 'react';
 
 function AddCourse() {
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [price, setPrice] = useState("");
+    const [image, setImage] = useState("");
 
   return (
     <div className='flex items-center justify-center'>
@@ -19,7 +23,7 @@ function AddCourse() {
             }}
         >
             <TextField 
-                onChange={() => {}}
+                onChange={(e) => {setTitle(e.target.value)}}
                 style={{width: '360px'}} 
                 label="Title" 
                 variant="outlined" 
@@ -27,7 +31,7 @@ function AddCourse() {
                 margin="normal" 
             />
             <TextField  
-                onChange={() => {}}
+                onChange={(e) => {setDescription(e.target.value)}}
                 style={{width: '360px'}} 
                 label="description" 
                 variant="outlined" 
@@ -35,7 +39,7 @@ function AddCourse() {
                 margin="normal" 
             />
             <TextField  
-                onChange={() => {}}
+                onChange={(e) => {setPrice(e.target.value)}}
                 style={{width: '360px'}} 
                 label="price" 
                 variant="outlined" 
@@ -43,7 +47,7 @@ function AddCourse() {
                 margin="normal" 
             />
             <TextField  
-                onChange={() => {}}
+                onChange={(e) => {setImage(e.target.value)}}
                 style={{width: '360px'}} 
                 label="Image link" 
                 variant="outlined"
@@ -67,10 +71,11 @@ function AddCourse() {
                     fetch('http://localhost:3000/admin/courses', {
                         method: "POST",
                         body: JSON.stringify({
-                            title: "title",
-                            description: "description",
-                            price: "price",
-                            image: "image",
+                            title: title,
+                            description: description,
+                            price: price,
+                            imageLink: image,
+                            prescribed: true
                         }),
                         headers: {
                             "Content-Type": "application/json",
