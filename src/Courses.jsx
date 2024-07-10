@@ -20,7 +20,7 @@ const Courses = () => {
           </Typography>
           <Typography paragraph>
               Heat 1/2 cup of the 
-            </Typography>
+          </Typography>
         </CardContent>
       </Card>
     </div>
