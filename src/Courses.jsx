@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 
 const Courses = () => {
   return (
-    <div className=''>
+    <div className='flex items-center'>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
           component="img"
