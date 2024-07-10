@@ -5,18 +5,20 @@ import Appbar from './Appbar';
 import Signup from './Signup';
 import Signin from './Signin';
 import AddCourse from './AddCourse';
+import Courses from './Courses';
 
 
 
 function App() {
   return (
-    <div style={{width: "100vw", height:"100vh", backgroundColor: "#eeeeee" }}>
+    <div style={{width: "100vw", height:"100vh", backgroundColor: "#111", color: '#fff' }}>
       <Appbar />
       <Router>
         <Routes>
           <Route path="/signup" element={<Signup/>} />
           <Route path="/login" element={<Signin/>} />
           <Route path="/addcourse" element={<AddCourse/>} />
+          <Route path="/courses" element={<Courses/>} />
         </Routes>
       </Router>
     </div> 
