@@ -29,9 +29,7 @@ const Appbar = () => {
             <h2 className='text-[1.5vw] font-bold'>Courera</h2>
             <div className='flex gap-4'>
                 <Button 
-                    variant="contained" 
-                    margin="normal"
-                    size="large"
+                    
                     style={{marginTop: '16px'}}
                 >
                     {userEmail}
