@@ -8,7 +8,9 @@ const Appbar = () => {
    useEffect(() => {
 
         function callback2(data) {
-            console.log(data)
+            if(data.username) {
+                setUserEmail(data.username)
+            }
         }
         function callback1(res) {
             res.json().then(callback2)
