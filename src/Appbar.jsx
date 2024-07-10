@@ -42,6 +42,7 @@ const Appbar = () => {
                     }}
                     onClick={() => {
                         localStorage.setItem("token", null)
+                        window.location = "/"
                     }}
                 >
                     Logout
