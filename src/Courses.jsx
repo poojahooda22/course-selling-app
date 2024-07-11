@@ -5,6 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useEffect, useState } from 'react';
+import Course from './Course';
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
@@ -28,9 +29,7 @@ const Courses = () => {
     <div className='flex items-center justify-center gap-6'>
       {courses.map((course, index) => {
         return (
-          <div key={index}>
-            
-          </div> 
+          <Course key={index} course={course} />
         )
       })}
     </div>
