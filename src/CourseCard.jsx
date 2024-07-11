@@ -37,7 +37,7 @@ const CourseCard = () => {
             <h1>Course card</h1>
             {courseId}
             {JSON.stringify(course)}
-        
+            
         </div>
     )
 }
