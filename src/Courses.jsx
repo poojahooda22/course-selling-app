@@ -6,7 +6,7 @@ const Courses = () => {
 
     useEffect(() => {
       function callback2(data){
-        setCourses(data.courses);
+      setCourses(data.courses);
     }
     function callback1(res) {
       res.json().then(callback2)
