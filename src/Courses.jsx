@@ -1,6 +1,3 @@
-
-
-
 import { useEffect, useState } from 'react';
 import Course from './Course';
 
