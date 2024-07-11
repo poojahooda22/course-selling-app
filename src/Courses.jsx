@@ -22,7 +22,6 @@ const Courses = () => {
         //     title: 'title',
         //     description: 'description',
         //     price: 'price',
-        //     imageLink: 'image',
         // }),
         headers: {
             "Content-Type": "application/json",
