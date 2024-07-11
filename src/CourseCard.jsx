@@ -14,29 +14,24 @@ const CourseCard = () => {
         function callback1(res) {
         res.json().then(callback2)
         }
-        fetch('http://localhost:3000/admin/courses', {
+        fetch('http://localhost:3000/admin/course/:courseId', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${localStorage.getItem("token")}`
+                "Authorization": "Bearer" + localStorage.getItem("token")
             }
         }).then(callback1)
     })
 
-    let course;
-    for (let i = 0; i < courses.length; i++){
-        if(courses[i].id == courseId){
-            course = courses[i];
-        }
-    }
     
 
     return (
         <div>
-            {JSON.stringify(courses)}
+            
             <h1>Course card</h1>
             {courseId}
-            {JSON.stringify(course)}
+            
+            {courses.courseId}
         
         </div>
     )
