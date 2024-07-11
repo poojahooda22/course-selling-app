@@ -6,6 +6,7 @@ import Signup from './Signup';
 import Signin from './Signin';
 import AddCourse from './AddCourse';
 import Courses from './Courses';
+import CourseCard from './CourseCard';
 
 
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<Signin/>} />
           <Route path="/addcourse" element={<AddCourse/>} />
           <Route path="/courses" element={<Courses/>} />
+          <Route path="/course/:courseId" element={<CourseCard />} />
         </Routes>
       </Router>
     </div> 
