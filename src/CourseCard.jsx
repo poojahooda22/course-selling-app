@@ -17,23 +17,23 @@ const CourseCard = () => {
         fetch('http://localhost:3000/admin/courses/', {
             method: "GET",
             headers: {
-                "Content-Type": "application/json",
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
         }).then(callback1)
     })
 
-    let course;
+    let course = null;
     for (let i = 0; i < courses.length; i++){
-        if(courses[i].id == courseId){
-            course = courses[i];
-        }
+        if(courses[i].id == courseId) [
+            course = courses[i]
+        ]
     }
     
 
     return (
         <div>
             {JSON.stringify(courses)}
+            <br/><br/><br/><br/><br/> 
             <h1>Course card</h1>
             {courseId}
             {JSON.stringify(course)}
