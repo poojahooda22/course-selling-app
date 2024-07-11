@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import { useEffect } from 'react';
 
 const Courses = () => {
+  
 
     useEffect(() => {
       function callback2(data){
@@ -17,13 +18,13 @@ const Courses = () => {
     }
     fetch('http://localhost:3000/admin/courses', {
         method: "GET",
-        body: JSON.stringify({
-            title: 'title',
-            description: 'description',
-            price: 'price',
-            imageLink: 'image',
-            prescribed: true
-        }),
+        // body: JSON.stringify({
+        //     title: 'title',
+        //     description: 'description',
+        //     price: 'price',
+        //     imageLink: 'image',
+        //     prescribed: true
+        // }),
         headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem("token")}`
