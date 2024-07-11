@@ -20,7 +20,6 @@ const Courses = () => {
         method: "GET",
         // body: JSON.stringify({
         //     title: 'title',
-        //     description: 'description',
 
         // }),
         headers: {
