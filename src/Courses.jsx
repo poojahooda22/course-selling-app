@@ -58,7 +58,6 @@ const Courses = () => {
           </div> 
         )
       })}
-
     </div>
     
   )
