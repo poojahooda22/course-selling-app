@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 // import Course from "./Course"
 import { useEffect, useState } from 'react';
-import Course from "./Course";
 
 
 const CourseCard = () => {
@@ -34,7 +33,10 @@ const CourseCard = () => {
 
     return (
         <div>
-            <Course course={course} />
+            {JSON.stringify(courses)}
+            <h1>Course card</h1>
+            {courseId}
+            {JSON.stringify(course)}
         
         </div>
     )
