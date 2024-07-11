@@ -57,7 +57,6 @@ const Courses = () => {
             </Card>
           </div> 
         )
-        
       })}
 
     </div>
