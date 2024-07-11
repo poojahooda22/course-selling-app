@@ -13,11 +13,11 @@ const CourseCard = () => {
         res.json().then(callback2)
         }
         fetch('http://localhost:3000/admin/courses', {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${localStorage.getItem("token")}`
-        }
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.getItem("token")}`
+            }
         }).then(callback1)
     })
 
