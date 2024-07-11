@@ -1,8 +1,11 @@
-import Course from "./Course"
+import { useParams } from "react-router-dom";
+// import Course from "./Course"
 import { useEffect, useState } from 'react';
+import Course from "./Course";
 
 
 const CourseCard = () => {
+    let {courseId} = useParams();
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
@@ -21,9 +24,17 @@ const CourseCard = () => {
         }).then(callback1)
     })
 
+    let course;
+    for (let i = 0; i < courses.length; i++){
+        if(courses[i].id == courseId){
+            course = courses[i];
+        }
+    }
+    
+
     return (
         <div>
-            <h1>Course card</h1>
+            <Course course={course} />
         
         </div>
     )
