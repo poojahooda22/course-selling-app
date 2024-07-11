@@ -4,8 +4,8 @@ import Course from './Course';
 const Courses = () => {
   const [courses, setCourses] = useState([]);
 
-    useEffect(() => {
-      function callback2(data){
+  useEffect(() => {
+    function callback2(data){
       setCourses(data.courses);
     }
     function callback1(res) {
@@ -18,7 +18,8 @@ const Courses = () => {
         "Authorization": `Bearer ${localStorage.getItem("token")}`
       }
     }).then(callback1)
-    })
+  })
+
   return (
     <div className='flex items-center justify-center gap-6'>
       {courses.map((course, index) => {
