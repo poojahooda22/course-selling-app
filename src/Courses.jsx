@@ -13,7 +13,7 @@ const Courses = () => {
     }
     fetch('http://localhost:3000/admin/courses', {
       method: "GET",
-        headers: {
+      headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${localStorage.getItem("token")}`
         }
