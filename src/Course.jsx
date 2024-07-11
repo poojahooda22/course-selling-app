@@ -9,24 +9,24 @@ const Course = (props) => {
   return (
     <div>
         <Card sx={{ minWidth: 345 }}>
-              <CardMedia
+            <CardMedia
                 sx={{ height: 140 }}
                 image={props.course.imageLink}
                 alt="Paella dish"
-              />
-              <CardContent>
+            />
+            <CardContent>
                 <Typography gutterBottom variant="h5" color="text.secondary">
                   {props.course.title}
                 </Typography>
                 <Typography variant="body">
                   {props.course.description}
                 </Typography>
-              </CardContent>
-              <CardActions>
+            </CardContent>
+            <CardActions>
                 <Button size="small">Edit</Button>
                 <Button size="small">Delete</Button>
-              </CardActions>
-            </Card>
+            </CardActions>
+        </Card>
     </div>
   )
 }
