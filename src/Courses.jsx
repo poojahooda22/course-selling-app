@@ -21,7 +21,7 @@ const Courses = () => {
   })
 
   return (
-    <div className='flex items-center justify-center gap-6'>
+    <div className='flex items-center justify-center gap-6 flex-wrap'>
       {courses.map((course, index) => {
         return (
           <Course key={index} course={course} />
