@@ -9,29 +9,34 @@ const CourseCard = () => {
 
     useEffect(() => {
         function callback2(data){
-            setCourses(data.courses);
+        setCourses(data.courses);
         }
         function callback1(res) {
-            res.json().then(callback2)
+        res.json().then(callback2)
         }
-        fetch('http://localhost:3000/admin/course/:courseId', {
+        fetch('http://localhost:3000/admin/courses/', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer" + localStorage.getItem("token")
+                "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
         }).then(callback1)
     })
 
+    let course;
+    for (let i = 0; i < courses.length; i++){
+        if(courses[i].id == courseId){
+            course = courses[i];
+        }
+    }
     
 
     return (
         <div>
-            
+            {JSON.stringify(courses)}
             <h1>Course card</h1>
             {courseId}
-            
-            {courses.courseId}
+            {JSON.stringify(course)}
         
         </div>
     )
