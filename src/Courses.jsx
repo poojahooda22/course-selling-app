@@ -9,7 +9,7 @@ const Courses = () => {
         setCourses(data.courses);
     }
     function callback1(res) {
-        res.json().then(callback2)
+      res.json().then(callback2)
     }
     fetch('http://localhost:3000/admin/courses', {
       method: "GET",
