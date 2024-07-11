@@ -8,13 +8,12 @@ import Button from '@mui/material/Button';
 
 const Course = (props) => {
   return (
-    <div>
+    <div className=''>
         <Card sx={{ minWidth: 345 }}>
-            <CardMedia
-                sx={{ height: 140 }}
-                image={props.course.imageLink}
-                alt="Paella dish"
-            />
+            <div>
+                <img src={props.course.imageLink} style={{width: '16vw', height: '8vw'}}/>
+            </div>
+            
             <CardContent>
                 <Typography gutterBottom variant="h5" color="text.secondary">
                   {props.course.title}
