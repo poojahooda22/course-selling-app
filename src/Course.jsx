@@ -1,20 +1,25 @@
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
-
-const Course = () => {
+const Course = (props) => {
   return (
     <div>
         <Card sx={{ minWidth: 345 }}>
               <CardMedia
                 sx={{ height: 140 }}
-                image={course.imageLink}
+                image={props.course.imageLink}
                 alt="Paella dish"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" color="text.secondary">
-                  {course.title}
+                  {props.course.title}
                 </Typography>
                 <Typography variant="body">
-                  {course.description}
+                  {props.course.description}
                 </Typography>
               </CardContent>
               <CardActions>
