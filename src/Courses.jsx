@@ -21,7 +21,7 @@ const Courses = () => {
         // body: JSON.stringify({
         //     title: 'title',
         //     description: 'description',
-        //     price: 'price',
+
         // }),
         headers: {
             "Content-Type": "application/json",
