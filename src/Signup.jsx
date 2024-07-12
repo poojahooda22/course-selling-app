@@ -68,7 +68,7 @@ function Signup() {
                     style={{
                         marginTop: '16px',        
                     }}
-                    onClick={() => {
+                    onClick={async () => {
                         // this is one way to write the fetch function
                         // function callback2(data) {
                         //    localStorage.setItem("token", data.token);
@@ -86,15 +86,14 @@ function Signup() {
                         // }).then(callback)
 
                         // this is another way to write the fetch function with axios external library
-                        function callback1(res) {
-                            let data = res.data;
-                            localStorage.setItem("token", data.token);
-                            window.location = "/"
-                        }
-                        axios.post('http://localhost:3000/admin/signup', {
+
+                        const res = await axios.post('http://localhost:3000/admin/signup', {
                             username: email,
                             password: password
-                        }).then(callback1)
+                        })
+                        let data = res.data;
+                        localStorage.setItem("token", data.token);
+                        window.location = "/"
                     }}
 
                 >
