@@ -30,46 +30,44 @@ const CourseCard = () => {
     
 
     return (
-        <div>
-            <AddCourse courses={course} />
-            <h1>{course.title}</h1>
-            <UpdateCard course={course} />
+        <div className="">
+            <div className="w-full h-[14vw] bg-slate-700 -mb-[8vw]">
+
+            </div>
+            <div className="flex items-center justify-end px-[4vw]">
+                <CourseMini course={course} />
+            </div>
+            <div>
+                <AddCourse courses={course} />
+            </div>
+            
+            
         </div>
     )
 }
 
-function UpdateCard({course}) {
+function CourseMini({course}) {
     return (
         <div>
             <Card sx={{ minWidth: 345 }}>
-            <div className='w-[16vw] h-[6vw]'>
-                <img src={course.imageLink} className='w-full h-full object-cover'/>
-            </div>
-            <CardContent>
-                <Typography gutterBottom variant="h5" color="text.secondary">
-                  {course.title}
-                </Typography>
-                <Typography variant="body">
-                  {course.description}
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button 
-                    variant="contained" 
-                    margin="normal"
-                    size="large"
-                    style={{
-                        marginTop: '16px',        
-                    }}
-                    onClick={() => {}}
-                >
-                    Update
-                </Button>  
-            </CardActions>
-        </Card>
-           
+                <div className='w-[16vw] h-[6vw]'>
+                    <img src={course.imageLink} className='w-full h-full object-cover'/>
+                </div>
+                <CardContent>
+                    <Typography gutterBottom variant="h5" color="text.secondary">
+                    {course.title}
+                    </Typography>
+                    <Typography variant="body">
+                    {course.description}
+                    </Typography>
+                    <p className="mt-2 text-[1vw] font-medium">{course.price}</p>
+                </CardContent>
+                
+            </Card>  
         </div>
     )
 }
+
+
 
 export default CourseCard
