@@ -113,7 +113,7 @@ function UpdateSingleCourse({course, setCourse}) {
                 style={{width: '520px'}} 
                 label="price" 
                 variant="outlined" 
-                size="small" 
+                size="medium" 
                 margin="normal" 
             />
             <TextField 
