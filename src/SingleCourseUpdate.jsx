@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Card, Button, TextField } from "@mui/material";
 
 
-
 function SingleCourseUpdate({course, setCourse}) {
 
     const [title, setTitle] = useState(course.title);
