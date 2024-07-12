@@ -41,7 +41,7 @@ const Appbar = () => {
                 <Button 
                     style={{marginTop: '16px'}}
                     onClick={() => {
-                        navigate('/addcourse')
+                        navigate('/courses')
                     }}
                 >
                     Courses
