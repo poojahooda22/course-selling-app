@@ -80,12 +80,13 @@ function UpdateSingleCourse({course, setCourse}) {
             
             <Card 
                 style={{
-                    padding: '18px', 
+                    padding: '24px', 
                     width: 600, 
                     display:"flex", 
                     flexDirection: "column", 
                     justifyContent: "center", 
-                    alignItems: "center" 
+                    alignItems: "center",
+                    borderRadius: '16px' 
                 }}
             >
             <h3 className="text-[1vw] font-semibold">Update Course details</h3>
