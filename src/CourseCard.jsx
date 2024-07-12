@@ -1,8 +1,6 @@
 import { useParams } from "react-router-dom";
-// import Course from "./Course"
 import { useEffect, useState } from 'react';
 import SingleCourseUpdate from "./SingleCourseUpdate";
-
 import axios from 'axios';
 import { Card, CardContent, Typography, } from "@mui/material";
 
