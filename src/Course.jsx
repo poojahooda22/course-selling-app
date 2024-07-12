@@ -4,9 +4,11 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 
 const Course = (props) => {
+  const navigate = useNavigate();
   return (
     <div className=''>
         <Card sx={{ minWidth: 345 }}>
@@ -22,8 +24,12 @@ const Course = (props) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Edit</Button>
-                <Button size="small">Delete</Button>
+              <Button size="small"
+                onClick={() => {
+                  navigate("/course" + props.course._id)
+                }}
+              >Edit</Button>
+              <Button size="small">Delete</Button>
             </CardActions>
         </Card>
     </div>
