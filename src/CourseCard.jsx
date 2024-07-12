@@ -5,7 +5,7 @@ import AddCourse from "./AddCourse";
 import SingleCourseUpdate from "./SingleCourseUpdate";
 
 import axios from 'axios';
-import { Card, CardActions, CardContent, Typography, } from "@mui/material";
+import { Card, CardContent, Typography, } from "@mui/material";
 
 const CourseCard = () => {
     let { courseId } = useParams();
