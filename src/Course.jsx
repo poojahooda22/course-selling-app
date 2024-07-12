@@ -7,7 +7,9 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Course = ({course}) => {
+  
   const navigate = useNavigate();
+
   return (
     <div className=''>
         <Card sx={{ minWidth: 345 }}>
