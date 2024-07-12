@@ -54,10 +54,17 @@ function UpdateCard({course}) {
                 </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small"
-                onClick={() => {}}
-              >Update</Button>
-              
+                <Button 
+                    variant="contained" 
+                    margin="normal"
+                    size="large"
+                    style={{
+                        marginTop: '16px',        
+                    }}
+                    onClick={() => {}}
+                >
+                    Update
+                </Button>  
             </CardActions>
         </Card>
            
