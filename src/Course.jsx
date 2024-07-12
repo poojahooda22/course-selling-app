@@ -10,10 +10,9 @@ const Course = (props) => {
   return (
     <div className=''>
         <Card sx={{ minWidth: 345 }}>
-            <div>
-                <img src={props.course.imageLink} style={{width: '16vw', height: '8vw'}}/>
+            <div className='w-[16vw] h-[6vw]'>
+                <img src={props.course.imageLink} className='w-full h-full object-cover'/>
             </div>
-            
             <CardContent>
                 <Typography gutterBottom variant="h5" color="text.secondary">
                   {props.course.title}
