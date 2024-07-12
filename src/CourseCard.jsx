@@ -119,7 +119,7 @@ function UpdateSingleCourse({course, setCourse}) {
             <TextField 
                 onChange={(e) => {setImage(e.target.value)}}
                 value={image} 
-                style={{width: '360px'}} 
+                style={{width: '520px'}} 
                 label="Image link" 
                 variant="outlined"
                 size="medium"
