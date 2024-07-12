@@ -38,7 +38,7 @@ const CourseCard = () => {
                 <CourseMini course={course} />
             </div>
             <div className="flex items-start pl-[4vw]">
-                <UpdateSingleCourse courses={course} />
+                <UpdateSingleCourse courses={course} setCourse={setCourse} />
             </div>
             
             
@@ -68,7 +68,11 @@ function CourseMini({course}) {
     )
 }
 
-function UpdateSingleCourse() {
+function UpdateSingleCourse({course, setCourse}) {
+    const [title, setTitle] = useState(course.title);
+    const [description, setDescription] = useState(course.description);
+    const [price, setPrice] = useState(course.price);
+    const [image, setImage] = useState(course.imageLink);
     return (
         <div>
             
@@ -81,9 +85,11 @@ function UpdateSingleCourse() {
                     justifyContent: "center", 
                     alignItems: "center" 
                 }}
-        >
+            >
             <h3 className="text-[1vw] font-semibold">Update Course details</h3>
             <TextField 
+                value={title}
+                onChange={(e) => {setTitle(e.target.value)}}
                 style={{width: '360px'}} 
                 label="Title" 
                 variant="outlined" 
@@ -91,7 +97,8 @@ function UpdateSingleCourse() {
                 margin="normal" 
             />
             <TextField  
-               
+                onChange={(e) => {setDescription(e.target.value)}}
+               value={description}
                 style={{width: '360px'}} 
                 label="description" 
                 variant="outlined" 
@@ -99,13 +106,17 @@ function UpdateSingleCourse() {
                 margin="normal" 
             />
             <TextField  
+                value={price}
+                onChange={(e) => {setPrice(e.target.value)}}
                 style={{width: '360px'}} 
                 label="price" 
                 variant="outlined" 
                 size="small" 
                 margin="normal" 
             />
-            <TextField  
+            <TextField 
+                onChange={(e) => {setImage(e.target.value)}}
+                value={image} 
                 style={{width: '360px'}} 
                 label="Image link" 
                 variant="outlined"
@@ -119,8 +130,27 @@ function UpdateSingleCourse() {
                 style={{
                     marginTop: '16px',        
                 }}
-                onClick={() => {
-                    
+                onClick={async () => {
+                    axios.put('http://localhost:3000/admin/courses/' + course._id, {
+                        title: title,
+                        description: description,
+                        price: price,
+                        imageLink: image,
+                        published: true
+                    }, {
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": `Bearer ${localStorage.getItem("token")}`
+                        }
+                    });
+                    let updatedCourse = {
+                        _id: course._id,
+                        title: title,
+                        description: description,
+                        imageLink: image,
+                        price
+                    };
+                    setCourse(updatedCourse)
                 }}
             >
                 Update Course
