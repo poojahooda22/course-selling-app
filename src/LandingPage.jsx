@@ -39,7 +39,7 @@ function LandingPage() {
                         size="small"
                         color={"primary"}  
                         onClick={() => {
-                            window.location = "/login"
+                           navigate("/login")
                         }}     
                     >
                         Login
