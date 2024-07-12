@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 
 import AddCourse from "./AddCourse";
-import Course from "./Course";
+
 import axios from 'axios';
 
 const CourseCard = () => {
     let { courseId } = useParams();
-    const [courses, setCourses] = useState([]);
+    const [course, setCourse] = useState([]);
 
     useEffect(() => {
         axios.get('http://localhost:3000/admin/course/' + courseId, {
