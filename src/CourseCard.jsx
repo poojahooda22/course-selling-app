@@ -20,11 +20,11 @@ const CourseCard = () => {
     }, []);
 
 
-     if(!course) {
-        return <div>
-            <h3>Loading....</h3>
-        </div>
-     }
+    if(!course) {
+    return <div>
+        <h3>Loading....</h3>
+    </div>
+    }
     
 
     return (
