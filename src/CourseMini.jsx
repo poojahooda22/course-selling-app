@@ -14,7 +14,7 @@ function CourseMini({course}) {
                     <Typography variant="body" style={{fontSize: '.8vw', fontWeight: 'normal'}} >
                     {course.description}
                     </Typography>
-                    <p className="mt-2 text-[1vw] font-medium">{course.price}</p>
+                    <p className="mt-2 text-[1vw] font-medium">Rs {course.price}</p>
                 </CardContent>
                 
             </Card>  
