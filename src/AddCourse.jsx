@@ -11,7 +11,7 @@ function AddCourse() {
     const [image, setImage] = useState("");
 
   return (
-    <div className='flex items-center justify-center'>
+    <div className='flex items-center justify-center mt-[5vw]'>
         <Card 
             style={{
                 padding: '18px', 
