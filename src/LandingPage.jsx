@@ -1,9 +1,10 @@
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import { useNavigate } from 'react-router-dom';
 
 function LandingPage() {
-    
+    const navigate = useNavigate();
     return (
         <div>
         <Grid container spacing={4} style={{padding: 30, marginTop: 100}}>
@@ -28,7 +29,7 @@ function LandingPage() {
                         style={{marginRight: "16px"}}
                         color={"primary"}  
                         onClick={() => {
-                            window.location = "/signup"
+                            navigate("/signup")
                         }}  
                     >
                         Signup
