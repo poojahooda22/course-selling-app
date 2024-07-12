@@ -30,9 +30,9 @@ const CourseCard = () => {
     
 
     return (
-        <div className="">
-            <div className="w-full h-[14vw] bg-slate-700 -mb-[8vw]">
-
+        <div className="mt-6">
+            <div className="w-full h-[14vw] bg-zinc-800 text-white -mb-[8vw] flex items-center justify-center text-[2vw] font-semibold">
+                    <h2>{course.title}</h2>
             </div>
             <div className="flex items-center justify-end px-[4vw]">
                 <CourseMini course={course} />
