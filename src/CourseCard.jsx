@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const CourseCard = () => {
     let { courseId } = useParams();
-    const [course, setCourse] = useState([]);
+    const [course, setCourse] = useState(null);
 
     useEffect(() => {
         axios.get('http://localhost:3000/admin/course/' + courseId, {
@@ -21,7 +21,7 @@ const CourseCard = () => {
     }, []);
 
 
-     if(!courses) {
+     if(!course) {
         return <div>
             <h3>Loading....</h3>
         </div>
@@ -30,8 +30,9 @@ const CourseCard = () => {
 
     return (
         <div>
-            <AddCourse courses={courses} />
-            <UpdateCard courses={courses} />
+            <AddCourse courses={course} />
+            <h1>{course.title}</h1>
+            <UpdateCard course={course} />
         </div>
     )
 }
