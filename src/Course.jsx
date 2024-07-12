@@ -16,19 +16,19 @@ const Course = ({course}) => {
             <div className='w-[16vw] h-[6vw]'>
                 <img src={course.imageLink} className='w-full h-full object-cover'/>
             </div>
-            <CardContent>
-                <Typography gutterBottom variant="h5" color="text.secondary">
+            <CardContent style={{marginLeft: '10px'}}>
+                <Typography gutterBottom variant="h5" color="text.primary" style={{fontWeight: 'bold'}}>
                   {course.title}
                 </Typography>
-                <Typography variant="body">
+                <Typography variant="body" style={{fontSize: '.8vw', fontWeight: 'medium',  display: 'block'}}>
                   {course.description}
                 </Typography>
-                <Typography variant="paragraph">
-                  {course.price}
+                <Typography variant="paragraph" style={{fontSize: '1vw', fontWeight: 'bold', marginTop: '12px'}}>
+                  Rs {course.price}
                 </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small" variant='contained'
+            <CardActions style={{marginLeft: '14px'}}>
+              <Button size="small" variant='contained' style={{marginBottom: '10px'}}
                 onClick={() => {
                   navigate("/course/" + course._id)
                 }}
