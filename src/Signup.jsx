@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 // import { BASE_URL } from '../src/config';
 
 function Signup() {
@@ -70,21 +70,31 @@ function Signup() {
                     }}
                     onClick={() => {
                         // this is one way to write the fetch function
-                        function callback2(data) {
-                           localStorage.setItem("token", data.token);
-                           window.location = "/"
-                        }
-                        function callback(response) {
-                            response.json().then(callback2)
-                        }
-                        fetch('http://localhost:3000/admin/signup', {
-                            method: "POST",
-                            body: JSON.stringify({username: email, password}),
-                            headers: {
-                                "Content-Type": "application/json"
-                            },
-                        }).then(callback)
+                        // function callback2(data) {
+                        //    localStorage.setItem("token", data.token);
+                        //    window.location = "/"
+                        // }
+                        // function callback(response) {
+                        //     response.json().then(callback2)
+                        // }
+                        // fetch('http://localhost:3000/admin/signup', {
+                        //     method: "POST",
+                        //     body: JSON.stringify({username: email, password}),
+                        //     headers: {
+                        //         "Content-Type": "application/json"
+                        //     },
+                        // }).then(callback)
+
                         // this is another way to write the fetch function with axios external library
+                        function callback1(res) {
+                            let data = res.data;
+                            localStorage.setItem("token", data.token);
+                            window.location = "/"
+                        }
+                        axios.post('http://localhost:3000/admin/signup', {
+                            username: email,
+                            password: password
+                        }).then(callback1)
                     }}
 
                 >
