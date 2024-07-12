@@ -38,7 +38,7 @@ const CourseCard = () => {
                 <CourseMini course={course} />
             </div>
             <div className="flex items-start pl-[4vw]">
-                <UpdateSingleCourse courses={course} setCourse={setCourse} />
+                <UpdateSingleCourse course={course} setCourse={setCourse} />
             </div>
             
             
@@ -69,17 +69,19 @@ function CourseMini({course}) {
 }
 
 function UpdateSingleCourse({course, setCourse}) {
+
     const [title, setTitle] = useState(course.title);
     const [description, setDescription] = useState(course.description);
     const [price, setPrice] = useState(course.price);
     const [image, setImage] = useState(course.imageLink);
+
     return (
         <div>
             
             <Card 
                 style={{
                     padding: '18px', 
-                    width: 400, 
+                    width: 600, 
                     display:"flex", 
                     flexDirection: "column", 
                     justifyContent: "center", 
@@ -90,19 +92,19 @@ function UpdateSingleCourse({course, setCourse}) {
             <TextField 
                 value={title}
                 onChange={(e) => {setTitle(e.target.value)}}
-                style={{width: '360px'}} 
+                style={{width: '520px'}} 
                 label="Title" 
                 variant="outlined" 
-                size="small" 
+                size="medium" 
                 margin="normal" 
             />
             <TextField  
                 onChange={(e) => {setDescription(e.target.value)}}
                value={description}
-                style={{width: '360px'}} 
+                style={{width: '520px'}} 
                 label="description" 
                 variant="outlined" 
-                size="small" 
+                size="medium" 
                 margin="normal" 
             />
             <TextField  
