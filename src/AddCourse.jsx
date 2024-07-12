@@ -76,7 +76,7 @@ function AddCourse() {
                             description: description,
                             price: price,
                             imageLink: image,
-                            prescribed: true
+                            published: true
                         }),
                         headers: {
                             "Content-Type": "application/json",
