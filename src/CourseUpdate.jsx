@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
 import Typography from '@mui/material/Typography';
+import Course from "./Course";
 
 function CourseUpdate() {
     let { courseId} = useParams();
@@ -31,7 +32,7 @@ function CourseUpdate() {
     return (
         <div style={{}}>
             <GrayTop title={course.title}/>
-            <CourseCard course={course} />  
+            <Course course = {courses} />
             <UpdatedCard  course={course} setCourse={setCourse} />
         </div>
     )
