@@ -110,7 +110,7 @@ function UpdateSingleCourse({course, setCourse}) {
             <TextField  
                 value={price}
                 onChange={(e) => {setPrice(e.target.value)}}
-                style={{width: '360px'}} 
+                style={{width: '520px'}} 
                 label="price" 
                 variant="outlined" 
                 size="small" 
