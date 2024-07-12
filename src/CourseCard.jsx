@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 // import Course from "./Course"
 import { useEffect, useState } from 'react';
-
 import AddCourse from "./AddCourse";
 
 import axios from 'axios';
