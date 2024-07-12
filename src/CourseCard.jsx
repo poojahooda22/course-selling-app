@@ -122,7 +122,7 @@ function UpdateSingleCourse({course, setCourse}) {
                 style={{width: '360px'}} 
                 label="Image link" 
                 variant="outlined"
-                size="small"
+                size="medium"
                 margin="normal"  
             />           
             <Button 
