@@ -31,8 +31,17 @@ const CourseCard = () => {
 
     return (
         <div>
-            
             <AddCourse courses={courses} />
+            <UpdateCard courses={courses} />
+        </div>
+    )
+}
+
+function UpdateCard(props) {
+    return (
+        <div>
+            <h3>Update Card</h3>
+           
         </div>
     )
 }
