@@ -32,8 +32,19 @@ const Appbar = () => {
             <div className='flex gap-4'>
                 <Button 
                     style={{marginTop: '16px'}}
+                    onClick={() => {
+                        navigate('/addcourse')
+                    }}
                 >
-                    {userEmail}
+                    Add courses
+                </Button>
+                <Button 
+                    style={{marginTop: '16px'}}
+                    onClick={() => {
+                        navigate('/addcourse')
+                    }}
+                >
+                    Courses
                 </Button>
                 <Button 
                     variant="contained" 
