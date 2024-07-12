@@ -2,42 +2,41 @@ import { useParams } from "react-router-dom";
 // import Course from "./Course"
 import { useEffect, useState } from 'react';
 
+import AddCourse from "./AddCourse";
+import Course from "./Course";
+
 
 const CourseCard = () => {
-    let {courseId} = useParams();
+    let { courseId } = useParams();
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
         function callback2(data){
-        setCourses(data.courses);
+            setCourses(data.courses);
         }
         function callback1(res) {
-        res.json().then(callback2)
+            res.json().then(callback2)
         }
-        fetch('http://localhost:3000/admin/courses/', {
+        fetch('http://localhost:3000/admin/course/' + courseId, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
         }).then(callback1)
-    })
+    }, []);
 
-    let course = null;
-    for (let i = 0; i < courses.length; i++){
-        if(courses[i].id == courseId) [
-            course = courses[i]
-        ]
-    }
+
+     if(!courses) {
+        return <div>
+            <h3>Loading....</h3>
+        </div>
+     }
     
 
     return (
         <div>
-            {JSON.stringify(courses)}
-            <br/><br/><br/><br/><br/> 
-            <h1>Course card</h1>
             
-            {JSON.stringify(course)}
-
+            <AddCourse courses={courses} />
         </div>
     )
 }
