@@ -4,25 +4,21 @@ import { useEffect, useState } from 'react';
 
 import AddCourse from "./AddCourse";
 import Course from "./Course";
-
+import axios from 'axios';
 
 const CourseCard = () => {
     let { courseId } = useParams();
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
-        function callback2(data){
-            setCourses(data.courses);
-        }
-        function callback1(res) {
-            res.json().then(callback2)
-        }
-        fetch('http://localhost:3000/admin/course/' + courseId, {
+        axios.get('http://localhost:3000/admin/course/' + courseId, {
             method: "GET",
             headers: {
-                "Authorization": `Bearer ${localStorage.getItem("token")}`
+                "Authorization": "Bearer " + localStorage.getItem("token"),
             }
-        }).then(callback1)
+        }).then(res => {
+            setCourse(res.data.course);       
+        })
     }, []);
 
 
