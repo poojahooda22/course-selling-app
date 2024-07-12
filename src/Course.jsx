@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Course = ({course}) => {
-  
+
   const navigate = useNavigate();
 
   return (
@@ -25,12 +25,12 @@ const Course = ({course}) => {
                 </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small"
+              <Button size="small" variant='contained'
                 onClick={() => {
                   navigate("/course/" + course._id)
                 }}
               >Edit</Button>
-              <Button size="small">Delete</Button>
+              
             </CardActions>
         </Card>
     </div>
