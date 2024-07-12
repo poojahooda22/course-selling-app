@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import AddCourse from "./AddCourse";
 
 import axios from 'axios';
-import { Card, CardActions, CardContent, Typography, Button } from "@mui/material";
+import { Card, CardActions, CardContent, Typography, Button, TextField } from "@mui/material";
 
 const CourseCard = () => {
     let { courseId } = useParams();
@@ -31,14 +31,14 @@ const CourseCard = () => {
 
     return (
         <div className="mt-6">
-            <div className="w-full h-[14vw] bg-zinc-800 text-white -mb-[8vw] flex items-center justify-center text-[2vw] font-semibold">
+            <div className="w-full h-[14vw] bg-zinc-800 text-white -mb-[9vw] flex items-center justify-center text-[2vw] font-semibold">
                     <h2>{course.title}</h2>
             </div>
             <div className="flex items-center justify-end px-[4vw]">
                 <CourseMini course={course} />
             </div>
-            <div>
-                <AddCourse courses={course} />
+            <div className="flex items-start pl-[4vw]">
+                <UpdateSingleCourse courses={course} />
             </div>
             
             
@@ -64,6 +64,68 @@ function CourseMini({course}) {
                 </CardContent>
                 
             </Card>  
+        </div>
+    )
+}
+
+function UpdateSingleCourse() {
+    return (
+        <div>
+            
+            <Card 
+                style={{
+                    padding: '18px', 
+                    width: 400, 
+                    display:"flex", 
+                    flexDirection: "column", 
+                    justifyContent: "center", 
+                    alignItems: "center" 
+                }}
+        >
+            <h3 className="text-[1vw] font-semibold">Update Course details</h3>
+            <TextField 
+                style={{width: '360px'}} 
+                label="Title" 
+                variant="outlined" 
+                size="small" 
+                margin="normal" 
+            />
+            <TextField  
+               
+                style={{width: '360px'}} 
+                label="description" 
+                variant="outlined" 
+                size="small" 
+                margin="normal" 
+            />
+            <TextField  
+                style={{width: '360px'}} 
+                label="price" 
+                variant="outlined" 
+                size="small" 
+                margin="normal" 
+            />
+            <TextField  
+                style={{width: '360px'}} 
+                label="Image link" 
+                variant="outlined"
+                size="small"
+                margin="normal"  
+            />           
+            <Button 
+                variant="contained" 
+                margin="normal"
+                size="large"
+                style={{
+                    marginTop: '16px',        
+                }}
+                onClick={() => {
+                    
+                }}
+            >
+                Update Course
+            </Button>
+        </Card>
         </div>
     )
 }
