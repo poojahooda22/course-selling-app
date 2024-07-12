@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import AddCourse from "./AddCourse";
 
 import axios from 'axios';
+import { Card, CardActions, CardContent, Typography, Button } from "@mui/material";
 
 const CourseCard = () => {
     let { courseId } = useParams();
@@ -37,10 +38,28 @@ const CourseCard = () => {
     )
 }
 
-function UpdateCard(props) {
+function UpdateCard({course}) {
     return (
         <div>
-            <h3>Update Card</h3>
+            <Card sx={{ minWidth: 345 }}>
+            <div className='w-[16vw] h-[6vw]'>
+                <img src={course.imageLink} className='w-full h-full object-cover'/>
+            </div>
+            <CardContent>
+                <Typography gutterBottom variant="h5" color="text.secondary">
+                  {course.title}
+                </Typography>
+                <Typography variant="body">
+                  {course.description}
+                </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small"
+                onClick={() => {}}
+              >Update</Button>
+              
+            </CardActions>
+        </Card>
            
         </div>
     )
