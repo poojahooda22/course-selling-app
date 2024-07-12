@@ -69,7 +69,7 @@ function Signup() {
                         marginTop: '16px',        
                     }}
                     onClick={() => {
-                        
+                        // this is one way to write the fetch function
                         function callback2(data) {
                            localStorage.setItem("token", data.token);
                            window.location = "/"
@@ -84,6 +84,7 @@ function Signup() {
                                 "Content-Type": "application/json"
                             },
                         }).then(callback)
+                        // this is another way to write the fetch function with axios external library
                     }}
 
                 >
