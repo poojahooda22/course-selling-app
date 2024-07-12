@@ -23,6 +23,9 @@ const Course = ({course}) => {
                 <Typography variant="body">
                   {course.description}
                 </Typography>
+                <Typography variant="paragraph">
+                  {course.price}
+                </Typography>
             </CardContent>
             <CardActions>
               <Button size="small" variant='contained'
@@ -30,7 +33,6 @@ const Course = ({course}) => {
                   navigate("/course/" + course._id)
                 }}
               >Edit</Button>
-              
             </CardActions>
         </Card>
     </div>
