@@ -7,6 +7,7 @@ import Signin from './Signin';
 import AddCourse from './AddCourse';
 import Courses from './Courses';
 import CourseCard from './CourseCard';
+import LandingPage from './LandingPage';
 
 
 
@@ -16,6 +17,7 @@ function App() {
       <Router>
       <Appbar />
         <Routes>
+          <Route path="/" element={<LandingPage/>}></Route>
           <Route path="/signup" element={<Signup/>} />
           <Route path="/login" element={<Signin/>} />
           <Route path="/addcourse" element={<AddCourse/>} />
