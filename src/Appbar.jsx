@@ -98,7 +98,6 @@ const Appbar = () => {
             </div>
         </div>
     </>
-  
   )
 }
 
