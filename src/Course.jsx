@@ -18,7 +18,7 @@ const Course = ({course}) => {
           </div>
           <CardContent style={{marginLeft: '10px'}}>
             <Typography gutterBottom variant="h5" color="text.primary" style={{fontWeight: 'bold'}}>
-                  {course.title}
+                {course.title}
             </Typography>
                 <Typography variant="body" style={{fontSize: '.8vw', fontWeight: 'medium',  display: 'block'}}>
                   {course.description}
