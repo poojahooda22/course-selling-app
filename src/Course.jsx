@@ -31,7 +31,7 @@ const Course = ({course}) => {
           <Button size="small" variant='contained' style={{marginBottom: '10px'}}
             onClick={() => {
                 navigate("/course/" + course._id)
-              }}
+            }}
           >Edit</Button>
         </CardActions>
       </Card>
