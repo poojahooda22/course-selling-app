@@ -7,7 +7,7 @@ const Appbar = () => {
     const navigate = useNavigate();
     const [userEmail, setUserEmail] = useState(null)
 
-   useEffect(() => {
+    useEffect(() => {
         function callback2(data) {
             if(data.username) {
                 setUserEmail(data.username)
