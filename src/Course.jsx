@@ -20,7 +20,7 @@ const Course = ({course}) => {
             <Typography gutterBottom variant="h5" color="text.primary" style={{fontWeight: 'bold'}}>
               {course.title}
             </Typography>
-              <Typography variant="body" style={{fontSize: '.8vw', fontWeight: 'medium',  display: 'block'}}>
+            <Typography variant="body" style={{fontSize: '.8vw', fontWeight: 'medium',  display: 'block'}}>
                   {course.description}
                 </Typography>
                 <Typography variant="paragraph" style={{fontSize: '1vw', fontWeight: 'bold', marginTop: '12px'}}>
