@@ -19,7 +19,7 @@ const Course = ({course}) => {
           <CardContent style={{marginLeft: '10px'}}>
             <Typography gutterBottom variant="h5" color="text.primary" style={{fontWeight: 'bold'}}>
                   {course.title}
-              </Typography>
+            </Typography>
                 <Typography variant="body" style={{fontSize: '.8vw', fontWeight: 'medium',  display: 'block'}}>
                   {course.description}
                 </Typography>
