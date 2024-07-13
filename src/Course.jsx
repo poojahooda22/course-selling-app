@@ -17,7 +17,7 @@ const Course = ({course}) => {
             <img src={course.imageLink} className='w-full h-full object-cover'/>
           </div>
           <CardContent style={{marginLeft: '10px'}}>
-              <Typography gutterBottom variant="h5" color="text.primary" style={{fontWeight: 'bold'}}>
+            <Typography gutterBottom variant="h5" color="text.primary" style={{fontWeight: 'bold'}}>
                   {course.title}
                 </Typography>
                 <Typography variant="body" style={{fontSize: '.8vw', fontWeight: 'medium',  display: 'block'}}>
