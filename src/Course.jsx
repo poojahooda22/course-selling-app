@@ -13,7 +13,7 @@ const Course = ({course}) => {
   return (
     <div className=''>
       <Card sx={{ maxWidth: 345 }}>
-          <div className='w-[16vw] h-[6vw]'>
+        <div className='w-[16vw] h-[6vw]'>
             <img src={course.imageLink} className='w-full h-full object-cover'/>
           </div>
           <CardContent style={{marginLeft: '10px'}}>
