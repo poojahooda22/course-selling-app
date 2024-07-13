@@ -24,7 +24,7 @@ const Course = ({course}) => {
                   {course.description}
                 </Typography>
                 <Typography variant="paragraph" style={{fontSize: '1vw', fontWeight: 'bold', marginTop: '12px'}}>
-                  Rs {course.price}
+                Rs {course.price}
             </Typography>
           </CardContent>
             <CardActions style={{marginLeft: '14px'}}>
