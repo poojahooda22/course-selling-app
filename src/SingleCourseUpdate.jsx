@@ -12,7 +12,7 @@ function SingleCourseUpdate({course, setCourse}) {
 
     return (
         <div>
-        
+    
             <Card 
                 style={{
                     padding: '24px', 
