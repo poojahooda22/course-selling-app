@@ -34,7 +34,7 @@ const Course = ({course}) => {
               }}
             >Edit</Button>
           </CardActions>
-        </Card>
+      </Card>
     </div>
   )
 }
