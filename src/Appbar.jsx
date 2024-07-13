@@ -22,7 +22,7 @@ const Appbar = () => {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
         }).then(callback1)
-   }, [])
+    }, [])
 
     if (userEmail) {
         return <>
