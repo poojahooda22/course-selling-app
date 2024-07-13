@@ -16,7 +16,7 @@ const Course = ({course}) => {
           <div className='w-[16vw] h-[6vw]'>
             <img src={course.imageLink} className='w-full h-full object-cover'/>
           </div>
-            <CardContent style={{marginLeft: '10px'}}>
+          <CardContent style={{marginLeft: '10px'}}>
               <Typography gutterBottom variant="h5" color="text.primary" style={{fontWeight: 'bold'}}>
                   {course.title}
                 </Typography>
