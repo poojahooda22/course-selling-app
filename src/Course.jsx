@@ -22,7 +22,7 @@ const Course = ({course}) => {
             </Typography>
             <Typography variant="body" style={{fontSize: '.8vw', fontWeight: 'medium',  display: 'block'}}>
                   {course.description}
-                </Typography>
+              </Typography>
                 <Typography variant="paragraph" style={{fontSize: '1vw', fontWeight: 'bold', marginTop: '12px'}}>
                 Rs {course.price}
             </Typography>
