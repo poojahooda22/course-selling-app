@@ -33,7 +33,7 @@ const Course = ({course}) => {
                   navigate("/course/" + course._id)
                 }}
               >Edit</Button>
-            </CardActions>
+          </CardActions>
         </Card>
     </div>
   )
