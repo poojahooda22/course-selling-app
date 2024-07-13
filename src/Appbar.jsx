@@ -8,7 +8,6 @@ const Appbar = () => {
     const [userEmail, setUserEmail] = useState(null)
 
    useEffect(() => {
-
         function callback2(data) {
             if(data.username) {
                 setUserEmail(data.username)
