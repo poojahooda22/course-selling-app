@@ -32,7 +32,7 @@ const Course = ({course}) => {
                 onClick={() => {
                   navigate("/course/" + course._id)
                 }}
-              >Edit</Button>
+            >Edit</Button>
           </CardActions>
         </Card>
     </div>
