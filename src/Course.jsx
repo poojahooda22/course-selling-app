@@ -26,7 +26,7 @@ const Course = ({course}) => {
                 <Typography variant="paragraph" style={{fontSize: '1vw', fontWeight: 'bold', marginTop: '12px'}}>
                   Rs {course.price}
               </Typography>
-            </CardContent>
+          </CardContent>
             <CardActions style={{marginLeft: '14px'}}>
               <Button size="small" variant='contained' style={{marginBottom: '10px'}}
                 onClick={() => {
