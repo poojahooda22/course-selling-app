@@ -10,7 +10,6 @@ import CourseCard from './CourseCard';
 import LandingPage from './LandingPage';
 
 
-
 function App() {
   return (
     <div style={{width: "100vw", height:"100vh", backgroundColor: '#eeeeee' }}>
