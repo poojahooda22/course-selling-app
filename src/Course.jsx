@@ -29,7 +29,7 @@ const Course = ({course}) => {
         </CardContent>
         <CardActions style={{marginLeft: '14px'}}>
           <Button size="small" variant='contained' style={{marginBottom: '10px'}}
-              onClick={() => {
+            onClick={() => {
                 navigate("/course/" + course._id)
               }}
           >Edit</Button>
