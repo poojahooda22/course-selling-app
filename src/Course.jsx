@@ -28,7 +28,7 @@ const Course = ({course}) => {
             </Typography>
           </CardContent>
           <CardActions style={{marginLeft: '14px'}}>
-              <Button size="small" variant='contained' style={{marginBottom: '10px'}}
+            <Button size="small" variant='contained' style={{marginBottom: '10px'}}
                 onClick={() => {
                   navigate("/course/" + course._id)
                 }}
