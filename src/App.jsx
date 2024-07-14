@@ -10,6 +10,7 @@ import LandingPage from './LandingPage';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BASE_URL } from './config';
+import { RecoilRoot } from 'recoil';
 
 function App() {
   const [userEmail, setUserEmail] = useState(null)
@@ -30,7 +31,8 @@ function App() {
   }, [])
 
   return (
-    <div style={{width: "100vw", height:"100vh", backgroundColor: '#eeeeee' }}>
+    <RecoilRoot>
+        <div style={{width: "100vw", height:"100vh", backgroundColor: '#eeeeee' }}>
       <Router>
         <Appbar userEmail={userEmail} setUserEmail={setUserEmail} />
         <Routes>
@@ -43,6 +45,8 @@ function App() {
         </Routes>
       </Router>
     </div> 
+    </RecoilRoot>
+    
   )
 }
 
