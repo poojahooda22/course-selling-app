@@ -42,7 +42,7 @@ function App() {
           <Route path="/addcourse" element={<AddCourse/>} />
           <Route path="/courses" element={<Courses/>} />
           <Route path="/course/:courseId" element={<CourseCard />} />
-        </Routes>
+          </Routes>
       </Router>
       </div> 
     </RecoilRoot>
