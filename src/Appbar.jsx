@@ -5,7 +5,7 @@ import axios from 'axios';
 import { BASE_URL } from './config';
 
 
-const Appbar = ({userEmail}) => {
+const Appbar = ({user}) => {
     const navigate = useNavigate();
     
     if (userEmail) {
