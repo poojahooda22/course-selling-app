@@ -41,7 +41,7 @@ function App() {
             <Route path="/login" element={<Signin setUserEmail={setUserEmail}/>} />
             <Route path="/addcourse" element={<AddCourse/>} />
             <Route path="/courses" element={<Courses/>} />
-          <Route path="/course/:courseId" element={<CourseCard />} />
+            <Route path="/course/:courseId" element={<CourseCard />} />
           </Routes>
         </Router>
       </div> 
