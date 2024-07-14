@@ -1,28 +1,29 @@
 import Button from '@mui/material/Button';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
+import { response } from 'express';
 
 const Appbar = () => {
     const navigate = useNavigate();
     const [userEmail, setUserEmail] = useState(null)
 
-    useEffect(() => {
-        function callback2(data) {
-            if(data.username) {
-                setUserEmail(data.username)
-            }
-        }
-        function callback1(res) {
-            res.json().then(callback2)
-        }
-        fetch("http://localhost:3000/admin/me", {
-            method: "GET",
+
+    const init= async() => {
+        const response = await axios.get("http://localhost:3000/admin/me", {
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
-        }).then(callback1)
+        })
+        if(response.data.username) {
+            setUserEmail(response.data.username)
+        }
+    }
+
+    useEffect(() => {
+        init();
     }, [])
+        
 
     if (userEmail) {
         return <>
