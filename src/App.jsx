@@ -38,7 +38,7 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage userEmail={userEmail} />}></Route>
             <Route path="/signup" element={<Signup setUserEmail={setUserEmail}/>}  />
-          <Route path="/login" element={<Signin setUserEmail={setUserEmail}/>} />
+            <Route path="/login" element={<Signin setUserEmail={setUserEmail}/>} />
           <Route path="/addcourse" element={<AddCourse/>} />
           <Route path="/courses" element={<Courses/>} />
           <Route path="/course/:courseId" element={<CourseCard />} />
