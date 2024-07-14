@@ -1,10 +1,31 @@
 import Button from '@mui/material/Button';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { BASE_URL } from './config';
 
 
-const Appbar = ({userEmail, setUserEmail}) => {
+const Appbar = () => {
     const navigate = useNavigate();
-   
+    const [userEmail, setUserEmail] = useState(null)
+
+
+    const init= async() => {
+        const response = await axios.get(`${BASE_URL}/admin/me`, {
+            headers: {
+                "Authorization": `Bearer ${localStorage.getItem("token")}`
+            }
+        })
+        if(response.data.username) {
+            setUserEmail(response.data.username)
+        }
+    }
+
+    useEffect(() => {
+        init();
+    }, [])
+        
+
     if (userEmail) {
         return <>
         <div className='w-full flex items-center justify-between px-[2vw]'>
