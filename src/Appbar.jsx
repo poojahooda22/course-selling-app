@@ -1,12 +1,19 @@
 import Button from '@mui/material/Button';
-import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import { BASE_URL } from './config';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { userState } from './store/atoms/user';
+
 
 
 const Appbar = () => {
     const navigate = useNavigate();
+    const userLoading = useRecoilValue(isUserLoading);
+    const userEmail = useRecoilValue(userEmailState);
+    const setUser = useSetRecoilState(userState);
+
+    if(userLoading) {
+        return <></>
+    }
     
     if (userEmail) {
         return <>
