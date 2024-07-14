@@ -28,14 +28,14 @@ function App() {
   useEffect(() => {
     init();
   }, [])
-  
+
   return (
     <div style={{width: "100vw", height:"100vh", backgroundColor: '#eeeeee' }}>
       <Router>
         <Appbar userEmail={userEmail} setUserEmail={setUserEmail} />
         <Routes>
           <Route path="/" element={<LandingPage/>}></Route>
-          <Route path="/signup" element={<Signup/>} />
+          <Route path="/signup" element={<Signup/>}  />
           <Route path="/login" element={<Signin/>} />
           <Route path="/addcourse" element={<AddCourse/>} />
           <Route path="/courses" element={<Courses/>} />
