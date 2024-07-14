@@ -17,7 +17,7 @@ function App() {
   const init= async() => {
     const response = await axios.get(`${BASE_URL}/admin/me`, {
       headers: {
-          "Authorization": `Bearer ${localStorage.getItem("token")}`
+        "Authorization": `Bearer ${localStorage.getItem("token")}`
       }
     })
     if(response.data.username) {
