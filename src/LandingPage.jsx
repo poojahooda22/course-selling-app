@@ -37,7 +37,7 @@ function LandingPage({userEmail, setUserEmail}) {
                     }}
                     onClick={() => {
                         localStorage.setItem("token", null)
-                        window.location ="/" //this is to instantly refresh the page
+                        setUserEmail(null)//this is to instantly refresh the page
                     }}
                 >
                     Logout
