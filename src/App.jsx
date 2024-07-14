@@ -44,7 +44,7 @@ function App() {
           <Route path="/course/:courseId" element={<CourseCard />} />
         </Routes>
       </Router>
-    </div> 
+      </div> 
     </RecoilRoot>
     
   )
