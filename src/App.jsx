@@ -32,7 +32,7 @@ function App() {
 
   return (
     <RecoilRoot>
-        <div style={{width: "100vw", height:"100vh", backgroundColor: '#eeeeee' }}>
+      <div style={{width: "100vw", height:"100vh", backgroundColor: '#eeeeee' }}>
       <Router>
         <Appbar userEmail={userEmail} setUserEmail={setUserEmail} />
         <Routes>
