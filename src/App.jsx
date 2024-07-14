@@ -7,34 +7,21 @@ import AddCourse from './AddCourse';
 import Courses from './Courses';
 import CourseCard from './CourseCard';
 import LandingPage from './LandingPage';
-import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BASE_URL } from './config';
-import { RecoilRoot } from 'recoil';
+import { RecoilRoot, useSetRecoilState } from 'recoil';
+import { userState } from './store/atoms/user';
+
+
 
 function App() {
-  const [userEmail, setUserEmail] = useState(null)
-
-  const init= async() => {
-    const response = await axios.get(`${BASE_URL}/admin/me`, {
-      headers: {
-        "Authorization": `Bearer ${localStorage.getItem("token")}`
-      }
-    })
-    if(response.data.username) {
-      setUserEmail(response.data.username)
-    }
-  }
-
-  useEffect(() => {
-    init();
-  }, [])
-
+  
   return (
     <RecoilRoot>
       <div style={{width: "100vw", height:"100vh", backgroundColor: '#eeeeee' }}>
         <Router>
           <Appbar/>
+          <InitUser/>
           <Routes>
             <Route path="/" element={<LandingPage />}></Route>
             <Route path="/signup" element={<Signup />}  />
@@ -47,6 +34,39 @@ function App() {
       </div> 
     </RecoilRoot>
     
+  )
+}
+
+function InitUser() {
+  const setUser = useSetRecoilState(userState)
+
+  const init = async() => {
+    try {
+      const response = await axios.get(`${BASE_URL}/admin/me`, {
+        headers: {
+          "Authorization": `Bearer ${localStorage.getItem("token")}`
+        }
+      })
+      if(response.data.username) {
+        setUser({
+            isLoading: false,
+            userEmail: response.data.username
+        })
+      } else {
+        setUser({
+            isLoading: false,
+            userEmail: null
+        })
+      }
+    } catch (e) {
+      setUser({
+        isLoading: false,
+        userEmail: null
+      })
+    }
+  }
+  return (
+    <div></div>
   )
 }
 
