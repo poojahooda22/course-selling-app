@@ -5,11 +5,9 @@ import axios from 'axios';
 import { BASE_URL } from './config';
 
 
-const Appbar = () => {
+const Appbar = ({userEmail, setUserEmail}) => {
     const navigate = useNavigate();
-    const [userEmail, setUserEmail] = useState(null)
    
-
     if (userEmail) {
         return <>
         <div className='w-full flex items-center justify-between px-[2vw]'>
