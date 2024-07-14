@@ -7,13 +7,29 @@ import AddCourse from './AddCourse';
 import Courses from './Courses';
 import CourseCard from './CourseCard';
 import LandingPage from './LandingPage';
-
+import { useState } from 'react';
 
 function App() {
+  const [userEmail, setUserEmail] = useState(null)
+
+  const init= async() => {
+    const response = await axios.get(`${BASE_URL}/admin/me`, {
+        headers: {
+            "Authorization": `Bearer ${localStorage.getItem("token")}`
+        }
+    })
+    if(response.data.username) {
+        setUserEmail(response.data.username)
+    }
+}
+
+  useEffect(() => {
+      init();
+  }, [])
   return (
     <div style={{width: "100vw", height:"100vh", backgroundColor: '#eeeeee' }}>
       <Router>
-        <Appbar />
+        <Appbar userEmail={userEmail} setUserEmail={setUserEmail} />
         <Routes>
           <Route path="/" element={<LandingPage/>}></Route>
           <Route path="/signup" element={<Signup/>} />
