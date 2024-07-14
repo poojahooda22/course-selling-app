@@ -5,27 +5,9 @@ import axios from 'axios';
 import { BASE_URL } from './config';
 
 
-const Appbar = () => {
+const Appbar = ({userEmail, setUserEmail}) => {
     const navigate = useNavigate();
-    const [userEmail, setUserEmail] = useState(null)
-
-
-    const init= async() => {
-        const response = await axios.get(`${BASE_URL}/admin/me`, {
-            headers: {
-                "Authorization": `Bearer ${localStorage.getItem("token")}`
-            }
-        })
-        if(response.data.username) {
-            setUserEmail(response.data.username)
-        }
-    }
-
-    useEffect(() => {
-        init();
-    }, [])
-        
-
+    
     if (userEmail) {
         return <>
         <div className='w-full flex items-center justify-between px-[2vw]'>
@@ -56,7 +38,7 @@ const Appbar = () => {
                     }}
                     onClick={() => {
                         localStorage.setItem("token", null)
-                        window.location ="/" //this is to instantly refresh the page
+                        setUserEmail(null)//this is to instantly refresh the page
                     }}
                 >
                     Logout
