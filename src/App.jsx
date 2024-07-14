@@ -34,7 +34,7 @@ function App() {
     <RecoilRoot>
       <div style={{width: "100vw", height:"100vh", backgroundColor: '#eeeeee' }}>
         <Router>
-          <Appbar userEmail={userEmail}  />
+          <Appbar   />
           <Routes>
             <Route path="/" element={<LandingPage userEmail={userEmail} />}></Route>
             <Route path="/signup" element={<Signup setUserEmail={setUserEmail}/>}  />
