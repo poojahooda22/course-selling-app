@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { BASE_URL } from './config';
 
 
 const Appbar = () => {
@@ -10,7 +11,7 @@ const Appbar = () => {
 
 
     const init= async() => {
-        const response = await axios.get("http://localhost:3000/admin/me", {
+        const response = await axios.get(`${BASE_URL}/admin/me`, {
             headers: {
                 "Authorization": `Bearer ${localStorage.getItem("token")}`
             }
