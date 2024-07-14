@@ -8,23 +8,7 @@ import { BASE_URL } from './config';
 const Appbar = () => {
     const navigate = useNavigate();
     const [userEmail, setUserEmail] = useState(null)
-
-
-    const init= async() => {
-        const response = await axios.get(`${BASE_URL}/admin/me`, {
-            headers: {
-                "Authorization": `Bearer ${localStorage.getItem("token")}`
-            }
-        })
-        if(response.data.username) {
-            setUserEmail(response.data.username)
-        }
-    }
-
-    useEffect(() => {
-        init();
-    }, [])
-        
+   
 
     if (userEmail) {
         return <>
