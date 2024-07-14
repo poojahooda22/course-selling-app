@@ -23,7 +23,7 @@ function App() {
     if(response.data.username) {
       setUserEmail(response.data.username)
     }
-}
+  }
 
   useEffect(() => {
       init();
