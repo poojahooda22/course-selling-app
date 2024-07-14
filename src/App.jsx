@@ -7,16 +7,18 @@ import AddCourse from './AddCourse';
 import Courses from './Courses';
 import CourseCard from './CourseCard';
 import LandingPage from './LandingPage';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { BASE_URL } from './config';
 
 function App() {
   const [userEmail, setUserEmail] = useState(null)
 
   const init= async() => {
     const response = await axios.get(`${BASE_URL}/admin/me`, {
-        headers: {
-            "Authorization": `Bearer ${localStorage.getItem("token")}`
-        }
+      headers: {
+          "Authorization": `Bearer ${localStorage.getItem("token")}`
+      }
     })
     if(response.data.username) {
         setUserEmail(response.data.username)
