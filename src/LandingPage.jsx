@@ -3,8 +3,49 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import { useNavigate } from 'react-router-dom';
 
-function LandingPage() {
+function LandingPage({userEmail, setUserEmail}) {
     const navigate = useNavigate();
+
+
+    if (userEmail) {
+        return <>
+        <div className='w-full flex items-center justify-between px-[2vw]'>
+            <h2 className='text-[1.5vw] font-bold'>Coursera</h2> 
+            <div className='flex gap-4'>
+                <Button 
+                    style={{marginTop: '16px'}}
+                    onClick={() => {
+                        navigate('/addcourse')
+                    }}
+                >
+                    Add courses
+                </Button>
+                <Button 
+                    style={{marginTop: '16px'}}
+                    onClick={() => {
+                        navigate('/courses')
+                    }}
+                >
+                    Courses
+                </Button>
+                <Button 
+                    variant="contained" 
+                    margin="normal"
+                    size="large"
+                    style={{
+                        marginTop: '16px',        
+                    }}
+                    onClick={() => {
+                        localStorage.setItem("token", null)
+                        window.location ="/" //this is to instantly refresh the page
+                    }}
+                >
+                    Logout
+                </Button>
+            </div>
+        </div>
+    </> }
+
     return (
         <div>
         <Grid container spacing={4} style={{padding: 30, marginTop: 100}}>
