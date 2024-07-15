@@ -3,11 +3,16 @@ import { useEffect, useState } from 'react';
 import SingleCourseUpdate from "./SingleCourseUpdate";
 import axios from 'axios';
 import CourseMini from "./CourseMini";
+import { courseState } from "./store/atoms/course";
+import {useRecoilState, useRecoilValue, useSetRecoilState} from "recoil";
+import { courseTitle, coursePrice, isCourseLoading, courseImage } from "./store/selectors/course";
 
 const CourseCard = () => {
     let { courseId } = useParams();
-    const [course, setCourse] = useState(null);
+    const setCourse = useSetRecoilState(courseState);
+    const courseLoading = useRecoilValue(isCourseLoading);
 
+    const title = useRecoilValue(courseTitle);
     useEffect(() => {
         axios.get('http://localhost:3000/admin/course/' + courseId, {
             method: "GET",
@@ -15,12 +20,15 @@ const CourseCard = () => {
                 "Authorization": "Bearer " + localStorage.getItem("token"),
             }
         }).then(res => {
-            setCourse(res.data.course);       
+            setCourse({isLoading: false, course: res.data.course});
         })
+        .catch(e => {
+            setCourse({isLoading: false, course: null});
+        });
     }, []);
 
 
-    if(!course) {
+    if(courseLoading) {
     return <div>
         <h3>Loading....</h3>
     </div>
@@ -30,13 +38,13 @@ const CourseCard = () => {
     return (
         <div className="mt-6">
             <div className="w-full h-[14vw] bg-zinc-800 text-white -mb-[9vw] flex items-center justify-center text-[2vw] font-semibold">
-                    <h2>{course.title}</h2>
+                    <h2>{title}</h2>
             </div>
             <div className="flex items-center justify-end px-[4vw]">
-                <CourseMini course={course} />
+                <CourseMini  />
             </div>
             <div className="flex items-start pl-[4vw]">
-                <SingleCourseUpdate course={course} setCourse={setCourse} />
+                <SingleCourseUpdate  />
             </div>   
         </div>
     )
