@@ -5,7 +5,6 @@ import axios from 'axios';
 const Courses = () => {
   const [courses, setCourses] = useState([]);
 
-
   const init = async() => {
     const response = await axios.get('http://localhost:3000/admin/courses', {
       headers: {
@@ -13,10 +12,15 @@ const Courses = () => {
         "Authorization": `Bearer ${localStorage.getItem("token")}`
       }
     })
+    setCourses(response.data.courses);
   }
 
+  useEffect(() => {
+    init();
+  })
+
   //ugly way to write fetch request
-  
+
   // useEffect(() => {
   //   function callback2(data){
   //     setCourses(data.courses);
