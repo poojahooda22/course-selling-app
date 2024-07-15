@@ -25,7 +25,7 @@ export const courseTitle = selector({
   get: ({get}) => {
     const state = get(courseState);
     if (state.course) {
-        return state.course.title;
+      return state.course.title;
     }
     return "";
   },
