@@ -7,7 +7,7 @@ import { useState } from 'react';
 function AddCourse() {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-    const [price, setPrice] = useState("");
+    const [price, setPrice] = useState(0);
     const [image, setImage] = useState("");
 
   return (
