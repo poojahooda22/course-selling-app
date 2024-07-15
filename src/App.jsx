@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
+import { useEffect } from 'react';
 import Appbar from './Appbar';
 import Signup from './Signup';
 import Signin from './Signin';
@@ -65,6 +66,11 @@ function InitUser() {
       })
     }
   }
+
+  useEffect(() => {
+    init();
+  }, []);
+
   return (
     <div></div>
   )
