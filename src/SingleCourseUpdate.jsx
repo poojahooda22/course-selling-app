@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { Card, Button, TextField } from "@mui/material";
+import { useRecoilState } from "recoil";
+import { courseState } from "./store/atoms/course";
 
 
-function SingleCourseUpdate({course, setCourse}) {
+function SingleCourseUpdate() {
 
-    const [title, setTitle] = useState(course.title);
-    const [description, setDescription] = useState(course.description);
-    const [price, setPrice] = useState(course.price);
-    const [image, setImage] = useState(course.imageLink);
+    const [courseDetails, setCourse] = useRecoilState(courseState);
+
+    const [title, setTitle] = useState(courseDetails.course.title);
+    const [description, setDescription] = useState(courseDetails.course.description);
+    const [image, setImage] = useState(courseDetails.course.imageLink);
+    const [price, setPrice] = useState(courseDetails.course.price);
 
     return (
         <div>
@@ -68,7 +72,7 @@ function SingleCourseUpdate({course, setCourse}) {
                     marginTop: '16px',        
                 }}
                 onClick={async () => {
-                    axios.put('http://localhost:3000/admin/courses/' + course._id, {
+                    axios.put('http://localhost:3000/admin/courses/' +  courseDetails.course._id, {
                         title: title,
                         description: description,
                         price: price,
@@ -81,13 +85,13 @@ function SingleCourseUpdate({course, setCourse}) {
                         }
                     });
                     let updatedCourse = {
-                        _id: course._id,
+                        _id: courseDetails.course._id,
                         title: title,
                         description: description,
                         imageLink: image,
                         price
                     };
-                    setCourse(updatedCourse)
+                    setCourse({course: updatedCourse, isLoading: false});
                 }}
             >
                 Update Course
