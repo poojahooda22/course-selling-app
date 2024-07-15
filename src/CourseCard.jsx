@@ -22,9 +22,6 @@ const CourseCard = () => {
         }).then(res => {
             setCourse({isLoading: false, course: res.data.course});
         })
-        .catch(e => {
-            setCourse({isLoading: false, course: null});
-        });
     }, []);
 
 
