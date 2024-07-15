@@ -6,7 +6,6 @@ export const isCourseLoading = selector({
   key: 'isCourseLoaingState',
   get: ({get}) => {
     const state = get(courseState);
-
     return state.isLoading;
   },
 });
