@@ -61,28 +61,44 @@ function AddCourse() {
                 style={{
                     marginTop: '16px',        
                 }}
-                onClick={() => {
-                    function callback2(data){
-                        console.log(data)
-                        alert("Course added successfully")
-                    }
-                    function callback1(res) {
-                        res.json().then(callback2)
-                    }
-                    fetch('http://localhost:3000/admin/courses/', {
-                        method: "POST",
-                        body: JSON.stringify({
-                            title: title,
-                            description: description,
-                            price: price,
-                            imageLink: image,
-                            published: true
-                        }),
+                onClick={ async () => {
+                    // function callback2(data){
+                    //     console.log(data)
+                    //     alert("Course added successfully")
+                    // }
+                    // function callback1(res) {
+                    //     res.json().then(callback2)
+                    // }
+                    // fetch('http://localhost:3000/admin/courses/', {
+                    //     method: "POST",
+                    //     body: JSON.stringify({
+                    //         title: title,
+                    //         description: description,
+                    //         price: price,
+                    //         imageLink: image,
+                    //         published: true
+                    //     }),
+                    //     headers: {
+                    //         "Content-Type": "application/json",
+                    //         "Authorization": `Bearer ${localStorage.getItem("token")}`
+                    //     }
+                    // }).then(callback1)
+
+
+                    const response = await axios.post('http://localhost:3000/admin/courses/', {
+                        title: title,
+                        description: description,
+                        price: price,
+                        imageLink: image,
+                        published: true}, {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": `Bearer ${localStorage.getItem("token")}`
                         }
-                    }).then(callback1)
+                    })
+                    let data = response.data;
+                    console.log(data)
+                    alert("Course added successfully")
                 }}
             >
                 Add Course
