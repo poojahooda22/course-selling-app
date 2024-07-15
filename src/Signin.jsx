@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
+import axios from 'axios';
 
 function Signin() {
     const [email, setEmail] = useState("");
@@ -72,22 +73,29 @@ function Signin() {
                         marginTop: '16px',        
                     }}
                     onClick={() => {
-                        function callback2(data) {
-                            console.log(data);
-                            localStorage.setItem("token", data.token)
-                        }
-                        function callback(res) {
-                            res.json().then(callback2);
-                        }
-                        fetch('http://localhost:3000/user/signup', {
-                            method: 'POST',
-                            headers: {
-                                "Content-Type": "application/json",
-                                // "Authorization": "Bearer " + localStorage.ge
-                                username: email,
-                                password: password 
-                            }
-                        }).then(callback)
+                        // function callback2(data) {
+                        //     console.log(data);
+                        //     localStorage.setItem("token", data.token)
+                        // }
+                        // function callback(res) {
+                        //     res.json().then(callback2);
+                        // }
+                        // fetch('http://localhost:3000/user/signup', {
+                        //     method: 'POST',
+                        //     headers: {
+                        //         "Content-Type": "application/json",
+                        //         // "Authorization": "Bearer " + localStorage.ge
+                        //         username: email,
+                        //         password: password 
+                        //     }
+                        // }).then(callback)
+
+                        const res = axios.post('http://localhost:3000/user/signup', {
+                            username: email,
+                            password: password 
+                        })
+                        let data = res.data;
+                        console.log(data);
                     }}
                 >
                     Login
