@@ -36,7 +36,7 @@ export const coursePrice = selector({
   get: ({get}) => {
     const state = get(courseState);
     if (state.course) {
-        return state.course.price;
+      return state.course.price;
     }
     return "";
   },
