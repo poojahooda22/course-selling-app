@@ -3,6 +3,8 @@ import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useState } from 'react';
+import axios from 'axios';
+
 
 function AddCourse() {
     const [title, setTitle] = useState("");
@@ -84,20 +86,16 @@ function AddCourse() {
                     //     }
                     // }).then(callback1)
 
-
-                    const response = await axios.post('http://localhost:3000/admin/courses/', {
+                    await axios.post('http://localhost:3000/admin/courses/', {
                         title: title,
                         description: description,
                         price: price,
                         imageLink: image,
                         published: true}, {
-                        headers: {
-                            "Content-Type": "application/json",
+                        headers: { 
                             "Authorization": `Bearer ${localStorage.getItem("token")}`
                         }
                     })
-                    let data = response.data;
-                    console.log(data)
                     alert("Course added successfully")
                 }}
             >
