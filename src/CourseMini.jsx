@@ -1,6 +1,6 @@
 import { Card, CardContent, Typography } from "@mui/material";
 import { useRecoilValue } from "recoil";
-import { courseD, courseImage, courseTitle } from "./store/selectors/course";
+import { course, courseImage, courseTitle } from "./store/selectors/course";
 
 function CourseMini(props) {
     const title = useRecoilValue(courseTitle);
