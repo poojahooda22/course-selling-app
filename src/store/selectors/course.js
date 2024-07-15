@@ -15,7 +15,6 @@ export const courseDetails = selector({
   key: 'courseDetailsState',
   get: ({get}) => {
     const state = get(courseState);
-
     return state.course;
   },
 });
