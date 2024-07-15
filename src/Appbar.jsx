@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { userState } from './store/atoms/user';
 import { isUserLoading } from './store/selectors/isUserLoading';
-
+import { userEmailState } from "./store/selectors/userEmail"
 
 
 const Appbar = () => {
@@ -46,7 +46,10 @@ const Appbar = () => {
                     }}
                     onClick={() => {
                         localStorage.setItem("token", null)
-                        setUserEmail(null)//this is to instantly refresh the page
+                        setUser({
+                            isLoading: false,
+                            userEmail: null
+                        })//this is to instantly refresh the page
                     }}
                 >
                     Logout
