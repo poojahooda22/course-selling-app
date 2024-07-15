@@ -5,14 +5,15 @@ import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 import axios from 'axios';
-import { set } from 'express/lib/application';
-// import { BASE_URL } from '../src/config';
 import { useNavigate } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+import { userState } from './store/atoms/user';
 
-function Signup({setUserEmail}) {
+function Signup() {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password,  setPassword] = useState("");
+    const setUser = useSetRecoilState(userState);
 
   return (
     <div>
@@ -96,8 +97,8 @@ function Signup({setUserEmail}) {
                         })
                         let data = res.data;
                         localStorage.setItem("token", data.token);
-                        setUserEmail(email)
-                        // navigate('/courses')
+                        setUser({userEmail: email, isLoading: false})
+                        navigate('/courses')
                     }}
 
                 >
