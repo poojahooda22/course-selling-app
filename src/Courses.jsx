@@ -1,8 +1,19 @@
 import { useEffect, useState } from 'react';
 import Course from './Course';
+import axios from 'axios';
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
+
+
+  const init = async() => {
+    const response = await axios.get('http://localhost:3000/admin/courses', {
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${localStorage.getItem("token")}`
+      }
+    })
+  }
 
   useEffect(() => {
     function callback2(data){
