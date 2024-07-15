@@ -15,8 +15,7 @@ function CourseMini(props) {
                 <CardContent>
                     <Typography variant="h5" color="text.primary" style={{fontSize: '1.2vw', fontWeight: 'bold'}} >
                     {title}
-                    </Typography>
-               
+                    </Typography>          
                 </CardContent>
                 
             </Card>  
