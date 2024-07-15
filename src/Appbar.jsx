@@ -49,7 +49,7 @@ const Appbar = () => {
                         setUser({
                             isLoading: false,
                             userEmail: null
-                        })//
+                        })
                     }}
                 >
                     Logout
