@@ -5,10 +5,15 @@ import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+import { userState } from './store/atoms/user';
 
 function Signin() {
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password,  setPassword] = useState("");
+    const setUser = useSetRecoilState(userState);
   return (
     <div>
         <div 
@@ -50,6 +55,8 @@ function Signin() {
                     }}
                 >
                     <TextField 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         id="outlined-basic" 
                         label="Email" 
                         variant="outlined" 
@@ -57,6 +64,8 @@ function Signin() {
                         margin="normal" 
                     />
                     <TextField 
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         id="outlined-basic" 
                         label="Password" 
                         type='password' 
@@ -95,7 +104,9 @@ function Signin() {
                             password: password 
                         })
                         let data = res.data;
-                        console.log(data);
+                        localStorage.setItem("token", data.token);
+                        setUser({userEmail: email, isLoading: false})
+                        navigate('/courses')
                     }}
                 >
                     Login
