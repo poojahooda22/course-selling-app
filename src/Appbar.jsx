@@ -23,7 +23,7 @@ const Appbar = () => {
             justify-between px-[2vw]'
         >
             <h2 
-            className='text-[1.5vw] font-bold'
+                className='text-[1.5vw] font-bold'
             >
                 Coursera
             </h2> 
