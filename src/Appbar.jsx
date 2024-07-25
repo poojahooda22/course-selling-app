@@ -20,7 +20,8 @@ const Appbar = () => {
         return <>
         <div 
             className='w-full flex items-center 
-            justify-between px-[2vw]'>
+            justify-between px-[2vw]'
+        >
             <h2 className='text-[1.5vw] font-bold'>Coursera</h2> 
             <div className='flex gap-4'>
                 <Button 
