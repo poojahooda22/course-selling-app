@@ -81,7 +81,7 @@ function Signup() {
                         // function callback(response) {
                         //     response.json().then(callback2)
                         // }
-                        // fetch(
+                        // 
 
                         // this is another way to write the fetch function with axios external library
 
