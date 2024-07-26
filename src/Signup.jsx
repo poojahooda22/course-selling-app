@@ -86,8 +86,6 @@ function Signup() {
                         //     body: JSON.stringify({username: email, password}),
                         //     headers: {
                         //         "Content-Type": "application/json"
-                        //
-                        //
 
                         // this is another way to write the fetch function with axios external library
 
