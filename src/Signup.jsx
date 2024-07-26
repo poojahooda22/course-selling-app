@@ -79,7 +79,7 @@ function Signup() {
                         //    window.location = "/"
                         // }
                         // function callback(response) {
-                        //     response.json().then(callback2)
+                        //   response.json().then(callback2)
 
                         // this is another way to write the fetch function with axios external library
 
