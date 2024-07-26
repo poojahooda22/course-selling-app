@@ -87,7 +87,7 @@ function Signup() {
                         //     headers: {
                         //         "Content-Type": "application/json"
                         //     },
-                        // }).then(callback)
+                        // }).then
 
                         // this is another way to write the fetch function with axios external library
 
