@@ -83,7 +83,7 @@ function Signup() {
                         // }
                         // fetch('http://localhost:3000/admin/signup', {
                         //     method: "POST",
-                        //     body: JSON.stringify( 
+                        //     body: JSON.
 
                         // this is another way to write the fetch function with axios external library
 
