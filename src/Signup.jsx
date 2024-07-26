@@ -81,7 +81,7 @@ function Signup() {
                         // function callback(response) {
                         //     response.json().then(callback2)
                         // }
-                        // fetch('http://localhost:3000/admin
+                        // fetch('http://localhost:3000
 
                         // this is another way to write the fetch function with axios external library
 
