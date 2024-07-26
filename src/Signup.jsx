@@ -78,7 +78,7 @@ function Signup() {
                         //    localStorage.setItem("token", data.token);
                         //    window.location = "/"
                         // }
-                        // function callback(response) {
+                        // function callback
 
                         // this is another way to write the fetch function with axios external library
 
