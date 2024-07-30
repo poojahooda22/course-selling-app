@@ -82,8 +82,7 @@ function AddCourse() {
                     //     }),
                     //     headers: {
                     //         "Content-Type": "application/json",
-                    //         "Authorization": `Bearer ${localStorage.getItem("token")}`
-                    
+                    //         "Authorization":
 
                     await axios.post('http://localhost:3000/admin/courses/', {
                         title: title,
