@@ -69,7 +69,7 @@ function AddCourse() {
                     //     alert("Course added ")
                     // }
                     // function callback1(res) {
-                    //     res.json(
+                    //     res
 
                     await axios.post('http://localhost:3000/admin/courses/', {
                         title: title,
