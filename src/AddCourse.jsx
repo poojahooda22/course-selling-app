@@ -79,9 +79,7 @@ function AddCourse() {
                     //         price: price,
                     //         imageLink: image,
                     //         published: 
-                    //     }),
-                    //     headers: {
-                    //         "Content
+                    //     }),    
 
                     await axios.post('http://localhost:3000/admin/courses/', {
                         title: title,
