@@ -73,7 +73,6 @@ function AddCourse() {
                     // }
                     // fetch('http://localhost:3000/admin/courses/', {
                     //     method: "POST",
-                    //     body: 
                     await axios.post('http://localhost:3000/admin/courses/', {
                         title: title,
                         description: description,
