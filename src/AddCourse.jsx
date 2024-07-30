@@ -66,7 +66,7 @@ function AddCourse() {
                 onClick={ async () => {
                     // function callback2(data){
                     //     console.log(data)
-                    //     alert("Course added successfully")
+                    //     alert("Course added ")
                     // }
                     // function callback1(res) {
                     //     res.json().then(callback2)
