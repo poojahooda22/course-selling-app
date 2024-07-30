@@ -81,7 +81,7 @@ function AddCourse() {
                     //         published: 
                     //     }),
                     //     headers: {
-                    //         "Content-Type": "
+                    //         "Content
 
                     await axios.post('http://localhost:3000/admin/courses/', {
                         title: title,
