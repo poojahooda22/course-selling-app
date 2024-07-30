@@ -75,8 +75,7 @@ function AddCourse() {
                     //     method: "POST",
                     //     body: JSON.stringify({
                     //         title: title,
-                    //         description: description,
-                    //         price: price,
+
  
 
                     await axios.post('http://localhost:3000/admin/courses/', {
