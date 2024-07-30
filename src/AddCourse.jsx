@@ -68,7 +68,6 @@ function AddCourse() {
                     //     console.log(data)
                     //     alert("Course added ")
                     // }
-                    // function 
                     
                     await axios.post('http://localhost:3000/admin/courses/', {
                         title: title,
