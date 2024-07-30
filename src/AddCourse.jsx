@@ -66,8 +66,7 @@ function AddCourse() {
                 onClick={ async () => {
                     // function callback2(data){
                     //     console.log(data)
-                    //     alert("Course added ")
-                    // }
+                    //     alert(
                     
                     await axios.post('http://localhost:3000/admin/courses/', {
                         title: title,
