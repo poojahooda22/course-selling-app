@@ -78,7 +78,7 @@ function AddCourse() {
                     //         description: description,
                     //         price: price,
                     //         imageLink: image,
-                    //         published: true
+                    //         published: 
                     //     }),
                     //     headers: {
                     //         "Content-Type": "application/json",
