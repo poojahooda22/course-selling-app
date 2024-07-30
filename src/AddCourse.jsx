@@ -71,7 +71,6 @@ function AddCourse() {
                     // function callback1(res) {
                     //     res.json().then(callback2)
                     // }
-                    // fetch('ht
 
                     await axios.post('http://localhost:3000/admin/courses/', {
                         title: title,
