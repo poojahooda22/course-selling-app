@@ -1,5 +1,5 @@
 # React + Vite
 
-This template provides a minimal setup to get React worki 
+This template provides a minimal setup to get React wor
 
 
