@@ -1,4 +1,2 @@
 # React + Vite
 
-Thi 
-
