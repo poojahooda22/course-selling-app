@@ -1,5 +1,4 @@
 # React + Vite
 
-This template provides a minim
-
+This template provides a mi
 
