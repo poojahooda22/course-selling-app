@@ -1,4 +1,4 @@
 # React + Vite
 
-This template provi
+This template 
 
