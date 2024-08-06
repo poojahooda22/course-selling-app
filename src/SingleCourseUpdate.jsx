@@ -8,7 +8,6 @@ import { courseState } from "./store/atoms/course";
 function SingleCourseUpdate() {
 
     const [courseDetails, setCourse] = useRecoilState(courseState);
-
     const [title, setTitle] = useState(courseDetails.course.title);
     const [description, setDescription] = useState(courseDetails.course.description);
     const [image, setImage] = useState(courseDetails.course.imageLink);
