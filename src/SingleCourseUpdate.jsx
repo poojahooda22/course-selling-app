@@ -61,7 +61,7 @@ function SingleCourseUpdate() {
                     label="Image link" 
                     variant="outlined"
                     size="medium"
-                margin="normal"  
+                    margin="normal"  
                 />           
                 <Button 
                     variant="contained" 
