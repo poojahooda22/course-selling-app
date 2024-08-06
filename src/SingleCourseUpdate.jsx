@@ -47,8 +47,8 @@ function SingleCourseUpdate() {
             />
                 <TextField  
                     value={price}
-                onChange={(e) => {setPrice(e.target.value)}}
-                style={{width: '520px'}} 
+                    onChange={(e) => {setPrice(e.target.value)}}
+                    style={{width: '520px'}} 
                 label="price" 
                 variant="outlined" 
                 size="medium" 
