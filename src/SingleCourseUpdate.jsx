@@ -84,7 +84,7 @@ function SingleCourseUpdate() {
                         }
                         });
                         let updatedCourse = {
-                        _id: courseDetails.course._id,
+                            _id: courseDetails.course._id,
                         title: title,
                         description: description,
                         imageLink: image,
