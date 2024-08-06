@@ -30,7 +30,7 @@ function SingleCourseUpdate() {
                 <TextField 
                     value={title}
                     onChange={(e) => {setTitle(e.target.value)}}
-                style={{width: '520px'}} 
+                    style={{width: '520px'}} 
                 label="Title" 
                 variant="outlined" 
                 size="medium" 
