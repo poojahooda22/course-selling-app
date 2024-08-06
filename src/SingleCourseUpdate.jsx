@@ -75,7 +75,7 @@ function SingleCourseUpdate() {
                             title: title,
                             description: description,
                             price: price,
-                        imageLink: image,
+                            imageLink: image,
                         published: true
                         }, {
                         headers: {
