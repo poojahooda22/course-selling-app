@@ -26,7 +26,7 @@ function SingleCourseUpdate() {
                     borderRadius: '16px' 
                 }}
             >
-            <h3 className="text-[1vw] font-semibold">Update Course details</h3>
+                <h3 className="text-[1vw] font-semibold">Update Course details</h3>
                 <TextField 
                     value={title}
                     onChange={(e) => {setTitle(e.target.value)}}
