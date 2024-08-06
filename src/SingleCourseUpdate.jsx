@@ -90,7 +90,7 @@ function SingleCourseUpdate() {
                         imageLink: image,
                         price
                     };
-                    setCourse({course: updatedCourse, isLoading: false});
+                        setCourse({course: updatedCourse, isLoading: false});
                     }}
                 >
                     Update Course
