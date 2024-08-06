@@ -40,7 +40,7 @@ function SingleCourseUpdate() {
                     onChange={(e) => {setDescription(e.target.value)}}
                     value={description}
                     style={{width: '520px'}} 
-                label="description" 
+                    label="description" 
                 variant="outlined" 
                 size="medium" 
                 margin="normal" 
