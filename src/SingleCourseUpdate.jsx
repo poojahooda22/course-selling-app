@@ -86,8 +86,8 @@ function SingleCourseUpdate() {
                         let updatedCourse = {
                             _id: courseDetails.course._id,
                             title: title,
-                        description: description,
-                        imageLink: image,
+                            description: description,
+                            imageLink: image,
                         price
                         };
                         setCourse({course: updatedCourse, isLoading: false});
