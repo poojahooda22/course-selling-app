@@ -65,7 +65,7 @@ function SingleCourseUpdate() {
             />           
                 <Button 
                     variant="contained" 
-                margin="normal"
+                    margin="normal"
                 size="large"
                 style={{
                     marginTop: '16px',        
