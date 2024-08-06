@@ -94,7 +94,7 @@ function SingleCourseUpdate() {
                 }}
             >
                 Update Course
-            </Button>
+                </Button>
             </Card>
         </div>
     )
