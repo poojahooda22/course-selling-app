@@ -32,7 +32,7 @@ function SingleCourseUpdate() {
                     onChange={(e) => {setTitle(e.target.value)}}
                     style={{width: '520px'}} 
                     label="Title" 
-                variant="outlined" 
+                    variant="outlined" 
                 size="medium" 
                     margin="normal" 
                 />
