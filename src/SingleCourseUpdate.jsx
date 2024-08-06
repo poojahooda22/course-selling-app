@@ -91,7 +91,7 @@ function SingleCourseUpdate() {
                         price
                     };
                     setCourse({course: updatedCourse, isLoading: false});
-                }}
+                    }}
                 >
                     Update Course
                 </Button>
