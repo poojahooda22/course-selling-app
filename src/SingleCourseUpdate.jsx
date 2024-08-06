@@ -53,7 +53,7 @@ function SingleCourseUpdate() {
                 variant="outlined" 
                 size="medium" 
                 margin="normal" 
-            />
+                />
                 <TextField 
                     onChange={(e) => {setImage(e.target.value)}}
                     value={image} 
