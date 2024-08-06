@@ -68,7 +68,7 @@ function SingleCourseUpdate() {
                     margin="normal"
                     size="large"
                     style={{
-                    marginTop: '16px',        
+                        marginTop: '16px',        
                     }}
                 onClick={async () => {
                     axios.put('http://localhost:3000/admin/courses/' +  courseDetails.course._id, {
