@@ -60,7 +60,7 @@ function SingleCourseUpdate() {
                     style={{width: '520px'}} 
                     label="Image link" 
                     variant="outlined"
-                size="medium"
+                    size="medium"
                 margin="normal"  
                 />           
                 <Button 
