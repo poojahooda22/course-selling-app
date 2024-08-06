@@ -58,7 +58,7 @@ function SingleCourseUpdate() {
                     onChange={(e) => {setImage(e.target.value)}}
                     value={image} 
                     style={{width: '520px'}} 
-                label="Image link" 
+                    label="Image link" 
                 variant="outlined"
                 size="medium"
                 margin="normal"  
