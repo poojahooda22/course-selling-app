@@ -83,7 +83,7 @@ function SingleCourseUpdate() {
                             "Authorization": `Bearer ${localStorage.getItem("token")}`
                         }
                         });
-                    let updatedCourse = {
+                        let updatedCourse = {
                         _id: courseDetails.course._id,
                         title: title,
                         description: description,
