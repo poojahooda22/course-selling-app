@@ -82,7 +82,7 @@ function SingleCourseUpdate() {
                             "Content-Type": "application/json",
                             "Authorization": `Bearer ${localStorage.getItem("token")}`
                         }
-                    });
+                        });
                     let updatedCourse = {
                         _id: courseDetails.course._id,
                         title: title,
