@@ -88,7 +88,7 @@ function SingleCourseUpdate() {
                             title: title,
                             description: description,
                             imageLink: image,
-                        price
+                            price
                         };
                         setCourse({course: updatedCourse, isLoading: false});
                     }}
