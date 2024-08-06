@@ -59,7 +59,7 @@ function SingleCourseUpdate() {
                     value={image} 
                     style={{width: '520px'}} 
                     label="Image link" 
-                variant="outlined"
+                    variant="outlined"
                 size="medium"
                 margin="normal"  
                 />           
