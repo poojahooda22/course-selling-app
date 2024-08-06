@@ -89,7 +89,7 @@ function SingleCourseUpdate() {
                         description: description,
                         imageLink: image,
                         price
-                    };
+                        };
                         setCourse({course: updatedCourse, isLoading: false});
                     }}
                 >
