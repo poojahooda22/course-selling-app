@@ -49,7 +49,7 @@ function SingleCourseUpdate() {
                     value={price}
                     onChange={(e) => {setPrice(e.target.value)}}
                     style={{width: '520px'}} 
-                label="price" 
+                    label="price" 
                 variant="outlined" 
                 size="medium" 
                 margin="normal" 
