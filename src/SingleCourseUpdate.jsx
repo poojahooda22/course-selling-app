@@ -42,7 +42,7 @@ function SingleCourseUpdate() {
                     style={{width: '520px'}} 
                     label="description" 
                     variant="outlined" 
-                size="medium" 
+                    size="medium" 
                     margin="normal" 
                 />
                 <TextField  
