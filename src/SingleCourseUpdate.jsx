@@ -85,7 +85,7 @@ function SingleCourseUpdate() {
                         });
                         let updatedCourse = {
                             _id: courseDetails.course._id,
-                        title: title,
+                            title: title,
                         description: description,
                         imageLink: image,
                         price
