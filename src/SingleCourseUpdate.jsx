@@ -44,7 +44,7 @@ function SingleCourseUpdate() {
                 variant="outlined" 
                 size="medium" 
                 margin="normal" 
-            />
+                />
                 <TextField  
                     value={price}
                     onChange={(e) => {setPrice(e.target.value)}}
