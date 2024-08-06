@@ -76,7 +76,7 @@ function SingleCourseUpdate() {
                             description: description,
                             price: price,
                             imageLink: image,
-                        published: true
+                            published: true
                         }, {
                         headers: {
                             "Content-Type": "application/json",
