@@ -27,7 +27,7 @@ function SingleCourseUpdate() {
                 }}
             >
             <h3 className="text-[1vw] font-semibold">Update Course details</h3>
-            <TextField 
+                <TextField 
                 value={title}
                 onChange={(e) => {setTitle(e.target.value)}}
                 style={{width: '520px'}} 
