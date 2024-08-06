@@ -38,7 +38,7 @@ function SingleCourseUpdate() {
             />
             <TextField  
                 onChange={(e) => {setDescription(e.target.value)}}
-               value={description}
+                value={description}
                 style={{width: '520px'}} 
                 label="description" 
                 variant="outlined" 
