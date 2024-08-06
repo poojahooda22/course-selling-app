@@ -93,7 +93,7 @@ function SingleCourseUpdate() {
                     setCourse({course: updatedCourse, isLoading: false});
                 }}
                 >
-                Update Course
+                    Update Course
                 </Button>
             </Card>
         </div>
