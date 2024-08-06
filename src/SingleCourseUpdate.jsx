@@ -34,7 +34,7 @@ function SingleCourseUpdate() {
                 label="Title" 
                 variant="outlined" 
                 size="medium" 
-                margin="normal" 
+                    margin="normal" 
                 />
                 <TextField  
                     onChange={(e) => {setDescription(e.target.value)}}
