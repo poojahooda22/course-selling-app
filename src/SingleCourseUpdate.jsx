@@ -77,7 +77,7 @@ function SingleCourseUpdate() {
                         price: price,
                         imageLink: image,
                         published: true
-                    }, {
+                        }, {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": `Bearer ${localStorage.getItem("token")}`
